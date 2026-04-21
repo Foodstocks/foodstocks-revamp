@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foodstocks Design System · Styleguide</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="_config.js"></script>
+</head>
+<body class="bg-white text-brand-ink">
+
+<!-- Sticky styleguide nav -->
+<header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-gray-200">
+  <div class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-3">
+      <img src="../assets/logo.png" alt="Foodstocks" class="h-9 w-auto" />
+      <span class="text-gray-300">·</span>
+      <span class="font-display font-semibold">Design System</span>
+    </div>
+    <nav class="hidden md:flex items-center gap-6 text-sm text-gray-600">
+      <a href="#colors" class="hover:text-brand-red">Colors</a>
+      <a href="#type" class="hover:text-brand-red">Typography</a>
+      <a href="#buttons" class="hover:text-brand-red">Buttons</a>
+      <a href="#forms" class="hover:text-brand-red">Forms</a>
+      <a href="#cards" class="hover:text-brand-red">Cards</a>
+      <a href="#badges" class="hover:text-brand-red">Badges</a>
+      <a href="#stats" class="hover:text-brand-red">Stats</a>
+      <a href="home.html" class="text-brand-red font-semibold">→ Homepage</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-8xl mx-auto px-6 py-12 space-y-20">
+
+  <!-- Intro -->
+  <section>
+    <span class="eyebrow">Phase 1 · Mockup</span>
+    <h1 class="heading-brand text-5xl md:text-7xl mt-4">Foodstocks <span class="text-brand-red">Design System</span></h1>
+    <p class="mt-4 max-w-2xl text-lg text-gray-600">Foundation visual untuk revamp foodstocks.id. Arah: minimalis, merah brand sebagai anchor utama, Fredoka untuk big brand moments. Semua komponen di sini dipakai konsisten di <a href="home.html" class="text-brand-red underline">homepage</a> dan halaman-halaman lain.</p>
+  </section>
+
+  <!-- Colors -->
+  <section id="colors" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Colors</h2>
+      <p class="text-gray-600 mt-1">Merah logo sebagai primary, oranye hangat sebagai accent/CTA, cream untuk section soft.</p>
+    </div>
+
+    <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4">
+      <!-- Brand red scale -->
+      <div class="col-span-2 md:col-span-4 lg:col-span-6">
+        <h3 class="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wider">Brand Red</h3>
+      </div>
+      <div><div class="h-20 rounded-xl" style="background:#FEF2F2"></div><p class="mt-2 text-xs font-mono">red/50<br><span class="text-gray-400">#FEF2F2</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#FEE2E2"></div><p class="mt-2 text-xs font-mono">red/100<br><span class="text-gray-400">#FEE2E2</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#FCA5A5"></div><p class="mt-2 text-xs font-mono">red/300<br><span class="text-gray-400">#FCA5A5</span></p></div>
+      <div><div class="h-20 rounded-xl ring-2 ring-brand-red/20" style="background:#E30613"></div><p class="mt-2 text-xs font-mono font-bold">red/600 (brand)<br><span class="text-gray-400 font-normal">#E30613</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#B91C1C"></div><p class="mt-2 text-xs font-mono">red/700<br><span class="text-gray-400">#B91C1C</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#7F1D1D"></div><p class="mt-2 text-xs font-mono">red/900<br><span class="text-gray-400">#7F1D1D</span></p></div>
+
+      <!-- Brand orange -->
+      <div class="col-span-2 md:col-span-4 lg:col-span-6 mt-4">
+        <h3 class="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wider">Brand Orange (Accent / CTA)</h3>
+      </div>
+      <div><div class="h-20 rounded-xl" style="background:#FFF7ED"></div><p class="mt-2 text-xs font-mono">orange/50<br><span class="text-gray-400">#FFF7ED</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#FED7AA"></div><p class="mt-2 text-xs font-mono">orange/200<br><span class="text-gray-400">#FED7AA</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#FDBA74"></div><p class="mt-2 text-xs font-mono">orange/300<br><span class="text-gray-400">#FDBA74</span></p></div>
+      <div><div class="h-20 rounded-xl ring-2 ring-brand-orange/20" style="background:#FF6B1A"></div><p class="mt-2 text-xs font-mono font-bold">orange/500 (accent)<br><span class="text-gray-400 font-normal">#FF6B1A</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#C2410C"></div><p class="mt-2 text-xs font-mono">orange/700<br><span class="text-gray-400">#C2410C</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#7C2D12"></div><p class="mt-2 text-xs font-mono">orange/900<br><span class="text-gray-400">#7C2D12</span></p></div>
+
+      <!-- Neutrals & special -->
+      <div class="col-span-2 md:col-span-4 lg:col-span-6 mt-4">
+        <h3 class="text-sm font-semibold text-gray-500 mb-2 uppercase tracking-wider">Neutrals &amp; Special</h3>
+      </div>
+      <div><div class="h-20 rounded-xl border border-gray-200" style="background:#FFFFFF"></div><p class="mt-2 text-xs font-mono">white<br><span class="text-gray-400">#FFFFFF</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#FFF5EB"></div><p class="mt-2 text-xs font-mono">cream<br><span class="text-gray-400">#FFF5EB</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#FFE8D3"></div><p class="mt-2 text-xs font-mono">peach<br><span class="text-gray-400">#FFE8D3</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#F1F5F9"></div><p class="mt-2 text-xs font-mono">gray/100<br><span class="text-gray-400">#F1F5F9</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#64748B"></div><p class="mt-2 text-xs font-mono">gray/500<br><span class="text-gray-400">#64748B</span></p></div>
+      <div><div class="h-20 rounded-xl" style="background:#0F172A"></div><p class="mt-2 text-xs font-mono">ink<br><span class="text-gray-400">#0F172A</span></p></div>
+    </div>
+  </section>
+
+  <!-- Typography -->
+  <section id="type" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Typography</h2>
+      <p class="text-gray-600 mt-1">Plus Jakarta Sans untuk display (Indonesian-designed, modern), Inter untuk body, Fredoka untuk aksen brand playful.</p>
+    </div>
+
+    <div class="grid gap-6">
+      <!-- Primary: heading-brand = Fredoka display -->
+      <div class="border border-gray-200 rounded-2xl p-6 bg-gradient-to-r from-brand-red/5 to-transparent">
+        <p class="text-xs font-mono text-brand-red font-semibold mb-2">heading-brand · Fredoka 600 · display-2xl · PRIMARY</p>
+        <p class="heading-brand text-[clamp(3rem,5vw+1rem,5.25rem)]">Gudangnya <span class="text-brand-red">Camilan</span>.</p>
+        <p class="mt-2 text-xs text-gray-500">Dipakai untuk hero h1 dan section titles utama — menyelaraskan dengan playful wordmark di logo.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-6">
+        <p class="text-xs font-mono text-gray-500 mb-2">heading-brand · 60/1.05</p>
+        <p class="heading-brand text-[clamp(2.25rem,3.5vw+1rem,3.75rem)]">Platform distribusi snack B2B terdepan.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-6">
+        <p class="text-xs font-mono text-gray-500 mb-2">font-display · Plus Jakarta Sans 700 · secondary headings</p>
+        <p class="font-display font-bold text-[clamp(1.5rem,2vw+1rem,2rem)] leading-tight">Teknologi AR untuk pengalaman produk yang hidup.</p>
+        <p class="mt-2 text-xs text-gray-500">Dipakai untuk card titles, h3, subsection headings.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-6 space-y-3">
+        <p class="text-xs font-mono text-gray-500">body scale (Inter)</p>
+        <p class="text-lg">Lead / body-lg · 18px — ideal untuk subheadline di bawah hero.</p>
+        <p class="text-base">Body regular · 16px — default paragraph size untuk konten.</p>
+        <p class="text-sm text-gray-600">Small · 14px — caption, meta, helper text.</p>
+        <p class="text-xs text-gray-500 font-mono uppercase tracking-wider">Micro · 12px — eyebrow / label.</p>
+      </div>
+      <div class="border border-gray-200 rounded-2xl p-6 bg-gray-50">
+        <p class="text-xs font-mono text-gray-500 mb-3">Hirarki pemakaian</p>
+        <ul class="space-y-2 text-sm">
+          <li><code class="text-brand-red font-mono text-xs">.heading-brand</code> → <b>Fredoka</b> · hero h1, section h2 utama (big brand moments)</li>
+          <li><code class="text-gray-700 font-mono text-xs">.font-display</code> → <b>Plus Jakarta Sans</b> · h3, card titles, subheadings</li>
+          <li><code class="text-gray-700 font-mono text-xs">.font-sans</code> → <b>Inter</b> · semua body text &amp; UI</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buttons -->
+  <section id="buttons" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Buttons</h2>
+      <p class="text-gray-600 mt-1">Rounded-full untuk kesan approachable; hover lift untuk feedback.</p>
+    </div>
+    <div class="flex flex-wrap gap-4 items-center p-8 bg-gray-50 rounded-3xl">
+      <button class="btn-primary">Mulai Jual Sekarang
+        <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+      </button>
+      <button class="btn-secondary">Daftar sebagai Supplier</button>
+      <button class="btn-ghost">Pelajari lebih lanjut →</button>
+      <button disabled class="btn-primary opacity-50 cursor-not-allowed">Disabled</button>
+    </div>
+    <p class="text-xs text-gray-500">Satu warna CTA utama — merah brand. Konsistensi memperkuat brand recall.</p>
+  </section>
+
+  <!-- Forms -->
+  <section id="forms" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Form Inputs</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-4 max-w-2xl">
+      <label class="block">
+        <span class="text-sm font-medium">Nama Lengkap</span>
+        <input type="text" placeholder="Budi Santoso" class="mt-1.5 w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 focus:outline-none transition" />
+      </label>
+      <label class="block">
+        <span class="text-sm font-medium">Email</span>
+        <input type="email" placeholder="you@company.id" class="mt-1.5 w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-red focus:ring-2 focus:ring-brand-red/20 focus:outline-none transition" />
+      </label>
+      <label class="block md:col-span-2">
+        <span class="text-sm font-medium">Peran</span>
+        <select class="mt-1.5 w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-red focus:outline-none">
+          <option>Supplier / Produsen</option>
+          <option>Reseller / Minimarket</option>
+          <option>Dropshipper</option>
+        </select>
+      </label>
+      <label class="block md:col-span-2">
+        <span class="text-sm font-medium">Pesan</span>
+        <textarea rows="3" class="mt-1.5 w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-brand-red focus:outline-none"></textarea>
+      </label>
+    </div>
+  </section>
+
+  <!-- Badges -->
+  <section id="badges" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Badges &amp; Chips</h2>
+    </div>
+    <div class="flex flex-wrap gap-3 items-center">
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-green-50 text-green-700 text-xs font-semibold">✓ BPOM Terdaftar</span>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-semibold">✓ Halal MUI</span>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 text-xs font-semibold">★ BBI Certified</span>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-red/10 text-brand-red text-xs font-semibold">AI Powered</span>
+      <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-orange/10 text-brand-orange text-xs font-semibold">BARU</span>
+      <span class="eyebrow">Teknologi Eksklusif</span>
+    </div>
+  </section>
+
+  <!-- Cards -->
+  <section id="cards" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Cards</h2>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-4">
+      <!-- Feature card — minimal default -->
+      <article class="card-hover bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+        <h3 class="font-display text-lg font-bold">FS OrderAgent</h3>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">AI tangkap order dari WhatsApp, email, voice note — otomatis masuk ke sistem.</p>
+        <a class="mt-6 inline-flex items-center gap-1 text-brand-red font-semibold text-sm" href="#">Pelajari →</a>
+      </article>
+
+      <!-- Feature card — filled red (untuk highlight/new feature) -->
+      <article class="card-hover bg-brand-red text-white rounded-3xl p-7">
+        <div class="flex items-center justify-between mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25"/></svg>
+          <span class="text-[10px] font-bold uppercase tracking-widest bg-white/15 px-2 py-1 rounded-full">Baru</span>
+        </div>
+        <h3 class="font-display text-lg font-bold">AR Product Viz</h3>
+        <p class="mt-2 text-sm text-white/80 leading-relaxed">Scan kemasan → 3D model, recipe, dan nutrisi. Pertama di Indonesia.</p>
+        <a class="mt-6 inline-flex items-center gap-1 font-semibold text-sm" href="#">Lihat demo →</a>
+      </article>
+
+      <!-- Testimonial card — minimal -->
+      <article class="card-hover bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red/30" fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+        <p class="mt-4 text-sm text-gray-700 leading-relaxed">Sejak gabung Foodstocks, order bulanan naik 340% dan kami tidak pernah overstock lagi.</p>
+        <div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-semibold text-xs text-gray-600">IS</div>
+          <div>
+            <p class="font-semibold text-sm">Ibu Sari</p>
+            <p class="text-xs text-gray-500">Minimarket Dinastar · Surabaya</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Stats -->
+  <section id="stats" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Stat Counters</h2>
+      <p class="text-gray-600 mt-1">Animate saat scroll ke viewport.</p>
+    </div>
+    <div class="grid grid-cols-2 md:grid-cols-4 gap-6 p-8 bg-gray-50 rounded-3xl">
+      <div><p class="heading-brand text-4xl md:text-5xl text-brand-red" data-counter="923" data-suffix="+">0</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">SKU Produk</p></div>
+      <div><p class="heading-brand text-4xl md:text-5xl text-brand-red" data-counter="500" data-suffix="+">0</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">Mitra</p></div>
+      <div><p class="heading-brand text-4xl md:text-5xl text-brand-red" data-counter="30" data-suffix="+">0</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">Kota</p></div>
+      <div><p class="heading-brand text-4xl md:text-5xl text-brand-red" data-counter="99" data-suffix="%">0</p><p class="text-xs uppercase tracking-widest text-gray-500 mt-2">Reliability</p></div>
+    </div>
+  </section>
+
+  <!-- Navbar preview -->
+  <section id="nav" class="space-y-6">
+    <div>
+      <h2 class="font-display text-3xl font-bold">Navigation &amp; Mega-Menu</h2>
+      <p class="text-gray-600 mt-1">Hover "Solutions" untuk lihat mega-menu.</p>
+    </div>
+    <div class="border border-gray-200 rounded-3xl overflow-hidden">
+      <div class="bg-gray-900 text-white text-xs px-6 py-2 flex justify-between">
+        <div class="flex gap-4">
+          <button data-lang-toggle class="hover:text-brand-orange">ID</button>
+          <span>•</span>
+          <a href="#">📞 +62 21 1234 5678</a>
+          <span>•</span>
+          <a href="#">✉ hello@foodstocks.id</a>
+        </div>
+        <div class="flex gap-3">
+          <a href="#">IG</a><a href="#">TikTok</a><a href="#">LinkedIn</a><a href="#">YT</a>
+        </div>
+      </div>
+      <nav class="bg-white px-6 py-4 flex items-center justify-between">
+        <img src="../assets/logo.png" alt="Foodstocks" class="h-10 w-auto" />
+        <div class="hidden lg:flex items-center gap-1">
+          <div class="nav-item relative">
+            <button class="btn-ghost">Solutions <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M5.5 7.5L10 12l4.5-4.5z"/></svg></button>
+            <div class="mega-menu absolute left-0 top-full mt-2 w-[640px] bg-white rounded-2xl shadow-card border border-gray-100 p-6 grid grid-cols-3 gap-6">
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">For Suppliers</p>
+                <ul class="space-y-2 text-sm">
+                  <li><a class="hover:text-brand-red" href="#">Distribution Network</a></li>
+                  <li><a class="hover:text-brand-red" href="#">Supplier Portal</a></li>
+                  <li><a class="hover:text-brand-red" href="#">Analytics</a></li>
+                </ul>
+              </div>
+              <div>
+                <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">For Resellers</p>
+                <ul class="space-y-2 text-sm">
+                  <li><a class="hover:text-brand-red" href="#">Wholesale</a></li>
+                  <li><a class="hover:text-brand-red" href="#">Consignment</a></li>
+                  <li><a class="hover:text-brand-red" href="#">Dropship</a></li>
+                </ul>
+              </div>
+              <div class="bg-brand-cream rounded-xl p-4">
+                <p class="text-xs font-semibold uppercase text-brand-orange mb-1">Baru</p>
+                <p class="font-display font-bold">FS OrderAgent</p>
+                <p class="text-xs text-gray-600 mt-1">AI order capture dari WhatsApp</p>
+                <a href="#" class="mt-2 inline-block text-brand-red text-sm font-semibold">Lihat →</a>
+              </div>
+            </div>
+          </div>
+          <a class="btn-ghost" href="#">Technology</a>
+          <a class="btn-ghost" href="#">Case Studies</a>
+          <a class="btn-ghost" href="#">Pricing</a>
+          <a class="btn-ghost" href="#">Blog</a>
+        </div>
+        <div class="flex items-center gap-3">
+          <a class="btn-ghost hidden md:inline-flex" href="#">Login</a>
+          <a class="btn-primary" href="#">Request Demo</a>
+        </div>
+      </nav>
+    </div>
+  </section>
+
+  <!-- Footer link -->
+  <section class="py-10 text-center">
+    <a href="home.html" class="btn-primary">Lihat Homepage Mockup →</a>
+  </section>
+
+</main>
+
+<script src="_shared.js"></script>
+</body>
+</html>

@@ -1,0 +1,76 @@
+{
+  "topBar": {
+    "phone": "+62 21 1234 5678",
+    "email": "hello@foodstocks.id"
+  },
+  "nav": {
+    "solutions": "Solutions",
+    "technology": "Technology",
+    "caseStudies": "Case Studies",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "login": "Login",
+    "requestDemo": "Request Demo"
+  },
+  "megaMenu": {
+    "forSuppliers": "For Suppliers",
+    "forResellers": "For Resellers",
+    "distributionNetwork": "Distribution Network",
+    "distributionNetworkDesc": "30+ kota, logistics terintegrasi",
+    "supplierPortal": "Supplier Portal",
+    "supplierPortalDesc": "Dashboard analytics real-time",
+    "qualityWarehousing": "Quality Warehousing",
+    "qualityWarehousingDesc": "Cold storage · food-grade",
+    "wholesale": "Wholesale",
+    "wholesaleDesc": "Bulk order harga terbaik",
+    "consignment": "Consignment",
+    "consignmentDesc": "Zero upfront · bayar saat laku",
+    "dropship": "Dropship",
+    "dropshipDesc": "Tanpa stok · custom branding",
+    "orderAgentBadge": "Baru",
+    "orderAgentTitle": "FS OrderAgent",
+    "orderAgentDesc": "AI tangkap order dari WhatsApp, email, dan foto PO — otomatis masuk ke sistem.",
+    "orderAgentCta": "Lihat demo →",
+    "orderAgentShort": "AI order capture",
+    "arShort": "3D, resep, nutrisi",
+    "new": "NEW"
+  },
+  "mobileMenu": {
+    "forSuppliers": "For Suppliers",
+    "forResellers": "For Resellers"
+  },
+  "footer": {
+    "tagline": "Platform distribusi snack B2B terdepan di Indonesia. Menghubungkan 500+ supplier & reseller di 30+ kota.",
+    "solutions": "Solutions",
+    "technology": "Technology",
+    "company": "Company",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Insight industri snack, langsung ke inbox Anda.",
+    "newsletterPlaceholder": "Email Anda",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "press": "Press",
+    "smartWms": "Smart WMS",
+    "analytics": "Analytics",
+    "copyright": "© 2026 PT Foodstocks Indonesia. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "security": "Security"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "Platform Distribusi Snack B2B",
+      "titleBefore": "Gudangnya",
+      "titleHighlight": "Camilan",
+      "titleAfter": "solusinya bisnis Anda.",
+      "description": "Distribusi snack B2B terpadu: AI order capture, AR produk, dan logistics di 30+ kota. Wholesale, consignment, atau dropship — pilih yang cocok.",
+      "ctaPrimary": "Mulai Jual Sekarang",
+      "ctaSecondary": "Daftar sebagai Supplier",
+      "statSku": "SKU",
+      "statMitra": "Mitra",
+      "statKota": "Kota",
+      "statReliability": "Reliability"
+    }
+  }
+}

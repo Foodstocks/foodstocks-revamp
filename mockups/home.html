@@ -1,0 +1,916 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Foodstocks — Gudangnya Camilan · Platform Distribusi Snack B2B Indonesia</title>
+  <meta name="description" content="Platform distribusi snack B2B terdepan di Indonesia. 923+ SKU, 500+ mitra, 30+ kota. Dengan AI OrderAgent, AR produk, dan sertifikasi BPOM/Halal." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="_config.js"></script>
+</head>
+<body class="bg-white text-brand-ink overflow-x-hidden">
+
+<!-- =========================================================
+     TOP BAR
+========================================================= -->
+<div class="bg-brand-ink text-white text-xs">
+  <div class="max-w-8xl mx-auto px-6 py-2 flex items-center justify-between">
+    <div class="flex items-center gap-4 text-white/80">
+      <button data-lang-toggle class="font-semibold hover:text-brand-orange transition">ID</button>
+      <span class="text-white/20">|</span>
+      <a href="tel:+62211234567" class="hidden sm:inline hover:text-brand-orange">+62 21 1234 5678</a>
+      <span class="text-white/20 hidden sm:inline">•</span>
+      <a href="mailto:hello@foodstocks.id" class="hidden md:inline hover:text-brand-orange">hello@foodstocks.id</a>
+    </div>
+    <div class="flex items-center gap-4 text-white/70">
+      <a href="#" aria-label="Instagram" class="hover:text-brand-orange">IG</a>
+      <a href="#" aria-label="TikTok" class="hover:text-brand-orange">TikTok</a>
+      <a href="#" aria-label="LinkedIn" class="hover:text-brand-orange">LinkedIn</a>
+      <a href="#" aria-label="YouTube" class="hover:text-brand-orange">YT</a>
+    </div>
+  </div>
+</div>
+
+<!-- =========================================================
+     MAIN NAVBAR (sticky) + MEGA-MENU
+========================================================= -->
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+  <nav class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+    <a href="home.html" class="flex-shrink-0">
+      <img src="../assets/logo.png" alt="Foodstocks" class="h-10 w-auto" />
+    </a>
+
+    <div class="hidden lg:flex items-center gap-1">
+      <!-- Solutions mega-menu -->
+      <div class="nav-item relative">
+        <button class="btn-ghost">Solutions
+          <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M5.5 7.5L10 12l4.5-4.5z"/></svg>
+        </button>
+        <div class="mega-menu absolute left-0 top-full w-[720px] bg-white rounded-2xl shadow-card border border-gray-100 p-6 grid grid-cols-3 gap-6">
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">For Suppliers</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="block hover:text-brand-red" href="solutions-supplier.html"><span class="font-semibold">Distribution Network</span><span class="block text-xs text-gray-500">30+ kota, logistics terintegrasi</span></a></li>
+              <li><a class="block hover:text-brand-red" href="#"><span class="font-semibold">Supplier Portal</span><span class="block text-xs text-gray-500">Dashboard analytics real-time</span></a></li>
+              <li><a class="block hover:text-brand-red" href="#"><span class="font-semibold">Quality Warehousing</span><span class="block text-xs text-gray-500">Cold storage · food-grade</span></a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-3">For Resellers</p>
+            <ul class="space-y-3 text-sm">
+              <li><a class="block hover:text-brand-red" href="solutions-reseller.html"><span class="font-semibold">Wholesale</span><span class="block text-xs text-gray-500">Bulk order harga terbaik</span></a></li>
+              <li><a class="block hover:text-brand-red" href="#"><span class="font-semibold">Consignment</span><span class="block text-xs text-gray-500">Zero upfront · bayar saat laku</span></a></li>
+              <li><a class="block hover:text-brand-red" href="#"><span class="font-semibold">Dropship</span><span class="block text-xs text-gray-500">Tanpa stok · custom branding</span></a></li>
+            </ul>
+          </div>
+          <div class="bg-gradient-to-br from-brand-cream to-brand-peach rounded-xl p-5 flex flex-col justify-between">
+            <div>
+              <span class="inline-block text-[10px] font-bold uppercase tracking-wider text-brand-orange bg-white px-2 py-0.5 rounded-full">Baru</span>
+              <p class="font-display font-bold text-lg mt-2">FS OrderAgent</p>
+              <p class="text-xs text-gray-700 mt-1">AI tangkap order dari WhatsApp, email, dan foto PO — otomatis masuk ke sistem.</p>
+            </div>
+            <a href="technology-order-agent.html" class="mt-3 inline-flex items-center gap-1 text-brand-red text-sm font-semibold">Lihat demo →</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Technology mega-menu -->
+      <div class="nav-item relative">
+        <button class="btn-ghost">Technology
+          <svg class="w-3 h-3" viewBox="0 0 20 20" fill="currentColor"><path d="M5.5 7.5L10 12l4.5-4.5z"/></svg>
+        </button>
+        <div class="mega-menu absolute left-0 top-full w-[560px] bg-white rounded-2xl shadow-card border border-gray-100 p-6 grid grid-cols-2 gap-4">
+          <a href="technology-order-agent.html" class="group flex gap-3 p-3 rounded-xl hover:bg-gray-50">
+            <span class="w-10 h-10 rounded-lg bg-brand-red/10 text-brand-red flex items-center justify-center">⚡</span>
+            <div><p class="font-semibold text-sm group-hover:text-brand-red">FS OrderAgent <span class="text-[10px] text-brand-orange">NEW</span></p><p class="text-xs text-gray-500">AI order capture</p></div>
+          </a>
+          <a href="technology-ar.html" class="group flex gap-3 p-3 rounded-xl hover:bg-gray-50">
+            <span class="w-10 h-10 rounded-lg bg-brand-orange/10 text-brand-orange flex items-center justify-center">🎯</span>
+            <div><p class="font-semibold text-sm group-hover:text-brand-red">AR Product Viz</p><p class="text-xs text-gray-500">3D, resep, nutrisi</p></div>
+          </a>
+          <a href="#" class="group flex gap-3 p-3 rounded-xl hover:bg-gray-50">
+            <span class="w-10 h-10 rounded-lg bg-blue-100 text-blue-600 flex items-center justify-center">📦</span>
+            <div><p class="font-semibold text-sm group-hover:text-brand-red">Smart WMS</p><p class="text-xs text-gray-500">Real-time inventory</p></div>
+          </a>
+          <a href="#" class="group flex gap-3 p-3 rounded-xl hover:bg-gray-50">
+            <span class="w-10 h-10 rounded-lg bg-emerald-100 text-emerald-600 flex items-center justify-center">📊</span>
+            <div><p class="font-semibold text-sm group-hover:text-brand-red">Analytics</p><p class="text-xs text-gray-500">Demand prediction</p></div>
+          </a>
+        </div>
+      </div>
+
+      <a class="btn-ghost" href="case-study-detail.html">Case Studies</a>
+      <a class="btn-ghost" href="pricing.html">Pricing</a>
+      <a class="btn-ghost" href="#">Blog</a>
+    </div>
+
+    <div class="flex items-center gap-2">
+      <a class="btn-ghost hidden md:inline-flex" href="#">Login</a>
+      <a class="btn-primary text-sm" href="#">Request Demo</a>
+      <button data-mobile-toggle class="lg:hidden p-2" aria-label="Menu">
+        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile menu -->
+  <div data-mobile-menu class="hidden lg:hidden border-t border-gray-100 bg-white">
+    <div class="px-6 py-4 space-y-3">
+      <a href="solutions-supplier.html" class="block py-2 font-semibold">Solutions</a>
+      <a href="technology-order-agent.html" class="block py-2 font-semibold">Technology</a>
+      <a href="case-study-detail.html" class="block py-2 font-semibold">Case Studies</a>
+      <a href="pricing.html" class="block py-2 font-semibold">Pricing</a>
+      <a href="#" class="block py-2 font-semibold">Blog</a>
+      <a href="#" class="block py-2 font-semibold">Login</a>
+    </div>
+  </div>
+</header>
+
+<!-- =========================================================
+     HERO — minimal, Fredoka headline, quiet visual
+========================================================= -->
+<section class="relative bg-white">
+  <div class="max-w-8xl mx-auto px-6 pt-16 pb-20 lg:pt-24 lg:pb-28 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+    <div class="lg:col-span-7 reveal">
+      <span class="eyebrow">Platform Distribusi Snack B2B</span>
+      <h1 class="heading-brand mt-6 text-[clamp(2.75rem,5.5vw+1rem,5.5rem)]">
+        Gudangnya <span class="text-brand-red">Camilan</span>,<br/>solusinya bisnis Anda.
+      </h1>
+      <p class="mt-6 text-lg text-gray-600 max-w-xl">
+        Distribusi snack B2B terpadu: AI order capture, AR produk, dan logistics di 30+ kota. Wholesale, consignment, atau dropship — pilih yang cocok.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#" class="btn-primary text-base">Mulai Jual Sekarang
+          <svg class="w-4 h-4" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/></svg>
+        </a>
+        <a href="#" class="btn-secondary text-base">Daftar sebagai Supplier</a>
+      </div>
+
+      <!-- Inline trust stats -->
+      <div class="mt-12 grid grid-cols-4 gap-4 max-w-xl border-t border-gray-100 pt-6">
+        <div><p class="heading-brand text-3xl lg:text-4xl text-brand-red" data-counter="923" data-suffix="+">0</p><p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">SKU</p></div>
+        <div><p class="heading-brand text-3xl lg:text-4xl text-brand-red" data-counter="500" data-suffix="+">0</p><p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Mitra</p></div>
+        <div><p class="heading-brand text-3xl lg:text-4xl text-brand-red" data-counter="30" data-suffix="+">0</p><p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Kota</p></div>
+        <div><p class="heading-brand text-3xl lg:text-4xl text-brand-red" data-counter="99" data-suffix="%">0</p><p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Reliability</p></div>
+      </div>
+    </div>
+
+    <!-- Visual — platform UI dummy mockup -->
+    <div class="lg:col-span-5 reveal relative">
+      <div class="relative aspect-[4/5] rounded-3xl overflow-hidden bg-gray-50 border border-gray-100 shadow-soft">
+
+        <!-- Browser chrome -->
+        <div class="bg-white border-b border-gray-100 px-4 py-3 flex items-center gap-3">
+          <div class="flex gap-1.5">
+            <span class="w-2.5 h-2.5 rounded-full bg-gray-200"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gray-200"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-gray-200"></span>
+          </div>
+          <div class="flex-1 px-3 py-1 rounded-md bg-gray-50 border border-gray-100 text-[10px] text-gray-500 font-mono truncate flex items-center gap-1.5">
+            <svg class="w-2.5 h-2.5 text-gray-400" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M5 9V7a5 5 0 0110 0v2a2 2 0 012 2v5a2 2 0 01-2 2H5a2 2 0 01-2-2v-5a2 2 0 012-2zm8-2v2H7V7a3 3 0 016 0z" clip-rule="evenodd"/></svg>
+            shop.foodstocks.id/dashboard
+          </div>
+        </div>
+
+        <!-- Dashboard body -->
+        <div class="p-5 space-y-4">
+          <!-- Greeting row -->
+          <div class="flex items-center justify-between">
+            <div>
+              <p class="text-[10px] text-gray-500 uppercase tracking-wider">Halo,</p>
+              <p class="font-display font-bold text-sm mt-0.5">Ibu Sari</p>
+            </div>
+            <span class="text-[10px] font-semibold bg-brand-red/10 text-brand-red px-2 py-1 rounded-full">Gold Partner</span>
+          </div>
+
+          <!-- Stat cards row -->
+          <div class="grid grid-cols-3 gap-2">
+            <div class="bg-white rounded-xl border border-gray-100 p-3">
+              <p class="text-[10px] text-gray-500 uppercase tracking-wider">Orders</p>
+              <p class="heading-brand text-lg mt-1">42</p>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-100 p-3">
+              <p class="text-[10px] text-gray-500 uppercase tracking-wider">Reward</p>
+              <p class="heading-brand text-lg mt-1 text-brand-red">12.4K</p>
+            </div>
+            <div class="bg-white rounded-xl border border-gray-100 p-3">
+              <p class="text-[10px] text-gray-500 uppercase tracking-wider">SKU</p>
+              <p class="heading-brand text-lg mt-1">923+</p>
+            </div>
+          </div>
+
+          <!-- Sales chart -->
+          <div class="bg-white rounded-xl border border-gray-100 p-4">
+            <div class="flex justify-between items-center mb-3">
+              <span class="text-xs font-semibold">Penjualan mingguan</span>
+              <span class="text-[10px] text-green-600 font-semibold">+42%</span>
+            </div>
+            <div class="flex items-end gap-1.5 h-16">
+              <div class="flex-1 bg-gray-100 rounded-t" style="height:40%"></div>
+              <div class="flex-1 bg-gray-100 rounded-t" style="height:60%"></div>
+              <div class="flex-1 bg-gray-100 rounded-t" style="height:50%"></div>
+              <div class="flex-1 bg-gray-100 rounded-t" style="height:75%"></div>
+              <div class="flex-1 bg-brand-red rounded-t" style="height:90%"></div>
+              <div class="flex-1 bg-gray-100 rounded-t" style="height:65%"></div>
+              <div class="flex-1 bg-gray-100 rounded-t" style="height:80%"></div>
+            </div>
+            <div class="flex justify-between text-[9px] text-gray-400 mt-2">
+              <span>Sen</span><span>Sel</span><span>Rab</span><span>Kam</span><span>Jum</span><span>Sab</span><span>Min</span>
+            </div>
+          </div>
+
+          <!-- Recent orders -->
+          <div>
+            <p class="text-[10px] font-semibold text-gray-700 uppercase tracking-wider mb-2">Pesanan Terbaru</p>
+            <div class="space-y-1.5">
+              <div class="bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-3">
+                <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-[11px] font-semibold truncate">Chitato Keju · 2 karton</p>
+                  <p class="text-[9px] text-gray-500">#FS-2842 · hari ini</p>
+                </div>
+                <span class="text-[9px] font-semibold bg-amber-50 text-amber-700 px-1.5 py-0.5 rounded-full whitespace-nowrap">Diproses</span>
+              </div>
+              <div class="bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-3">
+                <div class="w-7 h-7 rounded-lg bg-gradient-to-br from-gray-100 to-gray-200"></div>
+                <div class="flex-1 min-w-0">
+                  <p class="text-[11px] font-semibold truncate">Indomie Goreng · 5 karton</p>
+                  <p class="text-[9px] text-gray-500">#FS-2841 · kemarin</p>
+                </div>
+                <span class="text-[9px] font-semibold bg-blue-50 text-blue-700 px-1.5 py-0.5 rounded-full whitespace-nowrap">Dikirim</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Live status chip -->
+        <div class="absolute top-16 left-5 bg-white rounded-full px-2.5 py-1 flex items-center gap-1.5 text-[10px] font-semibold border border-gray-100 shadow-sm">
+          <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Live
+        </div>
+      </div>
+
+      <!-- Floating overlay: OrderAgent AI notification (extends left) -->
+      <div class="absolute top-24 -left-3 lg:-left-8 bg-white rounded-2xl border border-gray-100 shadow-card p-3.5 max-w-[220px] hidden sm:block">
+        <div class="flex items-center gap-2 mb-2">
+          <span class="w-6 h-6 rounded-lg bg-brand-red flex items-center justify-center">
+            <svg class="w-3.5 h-3.5 text-white" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          </span>
+          <div>
+            <p class="text-[11px] font-bold">FS OrderAgent</p>
+            <p class="text-[9px] text-gray-500">WhatsApp · 9:42 AM</p>
+          </div>
+        </div>
+        <p class="text-[11px] text-gray-700 leading-relaxed italic">"Pak tolong kirim 10 karton Chitato besok ya"</p>
+        <div class="mt-2 pt-2 border-t border-gray-100 flex items-center gap-1 text-[10px] text-brand-red font-semibold">
+          <svg class="w-3 h-3" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          Parsed in 0.8s → Order #2843
+        </div>
+      </div>
+
+      <!-- Floating overlay: AR preview chip (extends right) -->
+      <div class="absolute bottom-16 -right-3 lg:-right-6 bg-white rounded-2xl border border-gray-100 shadow-card p-3 flex items-center gap-3 hidden sm:flex">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center">
+          <svg class="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+        </div>
+        <div>
+          <p class="text-[10px] text-gray-500 uppercase tracking-wider">AR Preview</p>
+          <p class="text-xs font-bold">Chitato Keju →</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TRUSTED BY (logo marquee)
+========================================================= -->
+<section class="py-12 border-y border-gray-100 bg-white">
+  <div class="max-w-8xl mx-auto px-6">
+    <p class="text-center text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">
+      Dipercaya oleh brand snack terkemuka Indonesia
+    </p>
+    <div class="marquee-wrapper overflow-hidden">
+      <div class="marquee-track">
+        <!-- placeholder logos (x2 for seamless loop) -->
+        <div class="flex items-center gap-16 text-2xl font-display font-bold text-gray-400">
+          <span>Indofood</span><span>Wings</span><span>Mayora</span><span>Garuda Food</span>
+          <span>Nabati</span><span>Orang Tua</span><span>Khong Guan</span><span>Kobe</span>
+          <span>Monde</span><span>Siantar Top</span>
+        </div>
+        <div class="flex items-center gap-16 text-2xl font-display font-bold text-gray-400" aria-hidden="true">
+          <span>Indofood</span><span>Wings</span><span>Mayora</span><span>Garuda Food</span>
+          <span>Nabati</span><span>Orang Tua</span><span>Khong Guan</span><span>Kobe</span>
+          <span>Monde</span><span>Siantar Top</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     DUAL-PATH SELECTOR — minimal tabs
+========================================================= -->
+<section class="py-24 border-t border-gray-100">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow">Satu platform, dua jalan</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">Pilih peran Anda</h2>
+      <p class="mt-4 text-gray-600">Supplier atau reseller? Kami siapkan tools berbeda untuk setiap kebutuhan.</p>
+    </div>
+
+    <div data-tabs class="mt-12 max-w-5xl mx-auto">
+      <div class="flex justify-center mb-10" role="tablist">
+        <div class="inline-flex p-1 rounded-full bg-gray-50 border border-gray-100">
+          <button data-tab-trigger="supplier" class="is-active px-5 py-2 rounded-full font-semibold text-sm transition" style="background:#E30613;color:white">Saya Supplier</button>
+          <button data-tab-trigger="reseller" class="px-5 py-2 rounded-full font-semibold text-sm transition text-gray-600">Saya Reseller</button>
+        </div>
+      </div>
+
+      <div data-tab-panel="supplier" class="grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="heading-brand text-3xl">Jangkauan distribusi tanpa repot logistik.</h3>
+          <p class="mt-4 text-gray-600">Produk Anda langsung terdistribusi ke 500+ reseller di 30+ kota. Kami urus gudang, pengiriman, dan analytics — Anda fokus produksi.</p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Gudang food-grade + cold storage</li>
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Dashboard penjualan real-time</li>
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Demand prediction AI</li>
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Route optimization otomatis</li>
+          </ul>
+          <a href="solutions-supplier.html" class="mt-8 btn-primary">Pelajari Supplier Portal →</a>
+        </div>
+        <div class="bg-gray-50 rounded-3xl border border-gray-100 p-6">
+          <div class="aspect-[4/3] rounded-2xl bg-white border border-gray-100 flex items-center justify-center">
+            <span class="text-sm text-gray-400 uppercase tracking-wider">Dashboard preview</span>
+          </div>
+          <div class="mt-5 space-y-3">
+            <div class="flex justify-between text-sm"><span class="text-gray-500">Distribusi bulan ini</span><span class="font-semibold text-brand-red">+42%</span></div>
+            <div class="flex justify-between text-sm"><span class="text-gray-500">Reseller aktif</span><span class="font-semibold">247</span></div>
+            <div class="flex justify-between text-sm"><span class="text-gray-500">Forecast bulan depan</span><span class="font-semibold">1,240 karton</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div data-tab-panel="reseller" class="hidden grid md:grid-cols-2 gap-12 items-center">
+        <div>
+          <h3 class="heading-brand text-3xl">Stok lengkap, harga reseller, tanpa minimum repot.</h3>
+          <p class="mt-4 text-gray-600">923+ SKU camilan terverifikasi dalam satu katalog. Wholesale, konsinyasi, atau dropship — pilih yang cocok untuk toko Anda.</p>
+          <ul class="mt-6 space-y-3">
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Harga wholesale mulai order 1 karton</li>
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Reward points tiap pembelian</li>
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> AI rekomendasi produk laku</li>
+            <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Dropship dengan branding sendiri</li>
+          </ul>
+          <a href="solutions-reseller.html" class="mt-8 btn-primary">Mulai Belanja Sekarang →</a>
+        </div>
+        <div class="bg-gray-50 rounded-3xl border border-gray-100 p-6">
+          <div class="aspect-[4/3] rounded-2xl bg-white border border-gray-100 flex items-center justify-center">
+            <span class="text-sm text-gray-400 uppercase tracking-wider">Reseller dashboard</span>
+          </div>
+          <div class="mt-5 space-y-3">
+            <div class="flex justify-between text-sm"><span class="text-gray-500">Reward points Anda</span><span class="font-semibold text-brand-red">12,450 pts</span></div>
+            <div class="flex justify-between text-sm"><span class="text-gray-500">Pesanan aktif</span><span class="font-semibold">3</span></div>
+            <div class="flex justify-between text-sm"><span class="text-gray-500">Tier</span><span class="font-semibold">Gold Partner</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CORE TECHNOLOGY (4 cards) — minimal, monochrome icons
+========================================================= -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="grid lg:grid-cols-3 gap-10 items-end mb-14">
+      <div class="lg:col-span-2 reveal">
+        <span class="eyebrow">Teknologi</span>
+        <h2 class="heading-brand mt-4 text-4xl md:text-5xl">Tech-forward distribusi snack, bukan cuma jual-beli.</h2>
+      </div>
+      <p class="text-gray-600 reveal">Dari AI order capture sampai AR produk 3D — infrastruktur yang belum ada di industri distribusi snack Indonesia.</p>
+    </div>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <!-- OrderAgent (BARU) -->
+      <article class="card-hover bg-brand-red text-white rounded-3xl p-7 relative">
+        <div class="flex items-center justify-between mb-6">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z"/></svg>
+          <span class="text-[10px] font-bold uppercase tracking-widest bg-white/15 px-2 py-1 rounded-full">Baru</span>
+        </div>
+        <h3 class="font-display text-lg font-bold">FS OrderAgent</h3>
+        <p class="mt-2 text-sm text-white/80 leading-relaxed">AI tangkap order dari WhatsApp, email, voice note, dan foto PO — otomatis masuk sistem.</p>
+        <a href="technology-order-agent.html" class="mt-6 inline-flex items-center gap-1 text-sm font-semibold hover:gap-2 transition-all">Lihat demo →</a>
+      </article>
+
+      <!-- AR -->
+      <article class="card-hover bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+        <h3 class="font-display text-lg font-bold">AR Product Viz</h3>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">Scan kemasan → model 3D, resep, info nutrisi, dan video how-to. Pertama di Indonesia.</p>
+        <a href="technology-ar.html" class="mt-6 inline-flex items-center gap-1 text-brand-red font-semibold text-sm">Pelajari →</a>
+      </article>
+
+      <!-- WMS -->
+      <article class="card-hover bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+        <h3 class="font-display text-lg font-bold">Smart WMS</h3>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">Warehouse Management System real-time. Auto-reorder mencegah stockout, cold storage terjaga.</p>
+        <a href="#" class="mt-6 inline-flex items-center gap-1 text-brand-red font-semibold text-sm">Pelajari →</a>
+      </article>
+
+      <!-- Analytics -->
+      <article class="card-hover bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z"/></svg>
+        <h3 class="font-display text-lg font-bold">Analytics &amp; Prediction</h3>
+        <p class="mt-2 text-sm text-gray-600 leading-relaxed">Demand forecasting berbasis data historis &amp; tren. Route optimization otomatis untuk logistik.</p>
+        <a href="#" class="mt-6 inline-flex items-center gap-1 text-brand-red font-semibold text-sm">Pelajari →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     3 BUSINESS MODELS — uniform white cards, subtle popular highlight
+========================================================= -->
+<section class="py-24">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow">Model kerjasama</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">3 cara untuk mulai</h2>
+      <p class="mt-4 text-gray-600">Fleksibel sesuai modal &amp; skala bisnis Anda. Pilih salah satu atau kombinasi.</p>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-6">
+      <article class="card-hover bg-white rounded-3xl p-8 border border-gray-100">
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400">01</p>
+        <h3 class="heading-brand text-2xl mt-2">Wholesale</h3>
+        <p class="mt-3 text-gray-600 text-sm">Beli putus dalam jumlah besar dengan harga terbaik. Cocok untuk toko &amp; minimarket established.</p>
+        <div class="mt-6 pt-6 border-t border-gray-100 space-y-2 text-sm">
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Harga termurah</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Min. 1 karton</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Reward points</div>
+        </div>
+        <a href="#" class="mt-6 inline-flex items-center gap-1 text-brand-red font-semibold text-sm">Pilih Wholesale →</a>
+      </article>
+
+      <article class="card-hover bg-white rounded-3xl p-8 border-2 border-brand-red relative">
+        <span class="absolute -top-3 left-1/2 -translate-x-1/2 text-[10px] font-bold uppercase tracking-widest bg-brand-red text-white px-3 py-1 rounded-full">Paling Populer</span>
+        <p class="text-xs font-semibold uppercase tracking-widest text-brand-red">02</p>
+        <h3 class="heading-brand text-2xl mt-2">Consignment</h3>
+        <p class="mt-3 text-gray-600 text-sm">Zero upfront capital. Bayar hanya saat produk terjual. Risiko nol, untung maksimal.</p>
+        <div class="mt-6 pt-6 border-t border-gray-100 space-y-2 text-sm">
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Tanpa modal awal</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Sisa stok di-retur</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Monitoring sales real-time</div>
+        </div>
+        <a href="#" class="mt-6 inline-flex items-center gap-1 text-brand-red font-semibold text-sm">Pilih Consignment →</a>
+      </article>
+
+      <article class="card-hover bg-white rounded-3xl p-8 border border-gray-100">
+        <p class="text-xs font-semibold uppercase tracking-widest text-gray-400">03</p>
+        <h3 class="heading-brand text-2xl mt-2">Dropship</h3>
+        <p class="mt-3 text-gray-600 text-sm">Tanpa gudang, tanpa stok. Kami kirim langsung ke customer Anda dengan branding toko Anda sendiri.</p>
+        <div class="mt-6 pt-6 border-t border-gray-100 space-y-2 text-sm">
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Tanpa simpan stok</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Custom packaging</div>
+          <div class="flex items-center gap-2 text-gray-700"><span class="text-brand-red">✓</span> Real-time tracking</div>
+        </div>
+        <a href="#" class="mt-6 inline-flex items-center gap-1 text-brand-red font-semibold text-sm">Pilih Dropship →</a>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FEATURED CASE STUDY — clean dark block, metrics monochrome
+========================================================= -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="grid lg:grid-cols-2 gap-12 items-center bg-brand-ink text-white rounded-3xl p-10 lg:p-16 reveal">
+      <div>
+        <span class="eyebrow" style="background:rgba(227,6,19,0.15);color:#FCA5A5">Case Study</span>
+        <h2 class="heading-brand mt-6 text-4xl md:text-5xl">
+          Dinastar naik <span class="text-brand-red">+340%</span> order dalam 6 bulan.
+        </h2>
+        <p class="mt-5 text-white/70 text-lg">Dari toko kelontong di Surabaya jadi jaringan 12 cabang dengan inventory terkontrol lewat Foodstocks Reseller Portal.</p>
+        <a href="case-study-detail.html" class="mt-8 btn-primary">Baca case study lengkap →</a>
+      </div>
+
+      <div class="grid grid-cols-2 gap-4">
+        <div class="border border-white/10 rounded-2xl p-5">
+          <p class="text-xs uppercase tracking-widest text-white/50">Order volume</p>
+          <p class="heading-brand text-4xl mt-2">+340%</p>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-5">
+          <p class="text-xs uppercase tracking-widest text-white/50">Cabang baru</p>
+          <p class="heading-brand text-4xl mt-2">12</p>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-5">
+          <p class="text-xs uppercase tracking-widest text-white/50">Waste stock</p>
+          <p class="heading-brand text-4xl mt-2">−82%</p>
+        </div>
+        <div class="border border-white/10 rounded-2xl p-5">
+          <p class="text-xs uppercase tracking-widest text-white/50">Waktu hemat</p>
+          <p class="heading-brand text-4xl mt-2">15h<span class="text-lg text-white/50">/wk</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     CERTIFICATIONS
+========================================================= -->
+<section class="py-16 bg-gray-50">
+  <div class="max-w-8xl mx-auto px-6">
+    <p class="text-center text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">Sertifikasi &amp; Jaminan Kualitas</p>
+    <div class="flex flex-wrap justify-center gap-8 items-center">
+      <div class="flex items-center gap-3 px-5 py-3 bg-white rounded-2xl shadow-soft">
+        <div class="w-10 h-10 rounded-full bg-green-100 text-green-700 flex items-center justify-center font-bold">✓</div>
+        <div><p class="text-xs text-gray-500">Terdaftar</p><p class="font-bold">BPOM</p></div>
+      </div>
+      <div class="flex items-center gap-3 px-5 py-3 bg-white rounded-2xl shadow-soft">
+        <div class="w-10 h-10 rounded-full bg-emerald-100 text-emerald-700 flex items-center justify-center font-bold">✓</div>
+        <div><p class="text-xs text-gray-500">Bersertifikat</p><p class="font-bold">Halal MUI</p></div>
+      </div>
+      <div class="flex items-center gap-3 px-5 py-3 bg-white rounded-2xl shadow-soft">
+        <div class="w-10 h-10 rounded-full bg-blue-100 text-blue-700 flex items-center justify-center font-bold">★</div>
+        <div><p class="text-xs text-gray-500">Partner</p><p class="font-bold">BBI</p></div>
+      </div>
+      <div class="flex items-center gap-3 px-5 py-3 bg-white rounded-2xl shadow-soft">
+        <div class="w-10 h-10 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center font-bold">🏭</div>
+        <div><p class="text-xs text-gray-500">Gudang</p><p class="font-bold">Food-grade</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     COVERAGE MAP — simplified, white bg
+========================================================= -->
+<section class="py-24">
+  <div class="max-w-8xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center">
+    <div class="reveal">
+      <span class="eyebrow">Jangkauan</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">30+ kota, 1 platform.</h2>
+      <p class="mt-5 text-gray-600 text-lg">Dari Sumatra sampai Papua — kami hadir di pusat distribusi strategis untuk memastikan camilan sampai ke tangan reseller tepat waktu.</p>
+      <div class="mt-8 grid grid-cols-2 gap-6 max-w-md">
+        <div><p class="font-semibold text-sm">Sumatra</p><p class="text-sm text-gray-500 mt-1">Medan, Palembang, Pekanbaru</p></div>
+        <div><p class="font-semibold text-sm">Jawa &amp; Bali</p><p class="text-sm text-gray-500 mt-1">Jakarta, Bandung, Surabaya, Denpasar</p></div>
+        <div><p class="font-semibold text-sm">Kalimantan</p><p class="text-sm text-gray-500 mt-1">Pontianak, Banjarmasin, Samarinda</p></div>
+        <div><p class="font-semibold text-sm">Indonesia Timur</p><p class="text-sm text-gray-500 mt-1">Makassar, Manado, Jayapura</p></div>
+      </div>
+      <a href="#" class="mt-8 btn-secondary">Lihat semua lokasi →</a>
+    </div>
+    <div class="reveal">
+      <div class="aspect-[4/3] rounded-3xl bg-gray-50 border border-gray-100 relative overflow-hidden">
+        <svg viewBox="0 0 400 300" class="w-full h-full p-8">
+          <g fill="#E30613" opacity="0.08">
+            <ellipse cx="60" cy="150" rx="35" ry="15" />
+            <ellipse cx="140" cy="170" rx="55" ry="18" />
+            <ellipse cx="210" cy="155" rx="30" ry="12" />
+            <ellipse cx="260" cy="170" rx="30" ry="18" />
+            <ellipse cx="320" cy="160" rx="35" ry="20" />
+            <ellipse cx="360" cy="175" rx="25" ry="15" />
+          </g>
+          <g fill="#E30613">
+            <circle cx="55" cy="145" r="3"><title>Medan</title></circle>
+            <circle cx="70" cy="158" r="3"><title>Pekanbaru</title></circle>
+            <circle cx="130" cy="172" r="4"><title>Jakarta</title></circle>
+            <circle cx="155" cy="180" r="3"><title>Surabaya</title></circle>
+            <circle cx="175" cy="182" r="3"><title>Denpasar</title></circle>
+            <circle cx="215" cy="150" r="3"><title>Pontianak</title></circle>
+            <circle cx="240" cy="165" r="3"><title>Banjarmasin</title></circle>
+            <circle cx="270" cy="170" r="3"><title>Makassar</title></circle>
+            <circle cx="300" cy="150" r="3"><title>Manado</title></circle>
+            <circle cx="360" cy="170" r="3"><title>Jayapura</title></circle>
+          </g>
+        </svg>
+        <div class="absolute bottom-5 left-5 bg-white rounded-xl px-4 py-2.5 border border-gray-100">
+          <p class="text-xs text-gray-500 uppercase tracking-wider">Warehouse aktif</p>
+          <p class="heading-brand text-2xl text-brand-red">30+</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     TESTIMONIALS — minimal
+========================================================= -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow">Testimoni</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">Kata mitra kami</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-3 gap-4">
+      <article class="bg-white rounded-3xl p-7 border border-gray-100">
+        <svg class="w-8 h-8 text-brand-red/30" fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+        <p class="mt-4 text-gray-700 leading-relaxed">Sebagai supplier baru, Foodstocks buka jalan ke 200+ reseller hanya dalam 3 bulan. Dashboard-nya bikin saya tahu produk mana yang paling laku.</p>
+        <div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-semibold text-sm text-gray-600">RH</div>
+          <div>
+            <p class="font-semibold text-sm">Rudi Hartono</p>
+            <p class="text-xs text-gray-500">Founder · Keripik Pedas Oom</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-3xl p-7 border border-gray-100">
+        <svg class="w-8 h-8 text-brand-red/30" fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+        <p class="mt-4 text-gray-700 leading-relaxed">Konsinyasi Foodstocks bikin saya berani coba produk baru tanpa takut rugi. Yang gak laku tinggal retur — gak ada stok mati.</p>
+        <div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-semibold text-sm text-gray-600">SA</div>
+          <div>
+            <p class="font-semibold text-sm">Ibu Siti Aminah</p>
+            <p class="text-xs text-gray-500">Owner · Toko Aminah · Bandung</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="bg-white rounded-3xl p-7 border border-gray-100">
+        <svg class="w-8 h-8 text-brand-red/30" fill="currentColor" viewBox="0 0 24 24"><path d="M6 17h3l2-4V7H5v6h3l-2 4zm8 0h3l2-4V7h-6v6h3l-2 4z"/></svg>
+        <p class="mt-4 text-gray-700 leading-relaxed">OrderAgent AI-nya luar biasa. Customer kirim WA, order langsung masuk sistem. Saya hemat 3 jam/hari dari input manual.</p>
+        <div class="mt-6 pt-6 border-t border-gray-100 flex items-center gap-3">
+          <div class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center font-semibold text-sm text-gray-600">DP</div>
+          <div>
+            <p class="font-semibold text-sm">Dewi Permata</p>
+            <p class="text-xs text-gray-500">Dropshipper · Medan</p>
+          </div>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     INTEGRATION LOGOS — minimal
+========================================================= -->
+<section class="py-20 bg-white">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="text-center mb-10">
+      <span class="eyebrow">Integrasi</span>
+      <h3 class="heading-brand mt-4 text-2xl md:text-3xl">Connect dengan tools yang Anda sudah pakai</h3>
+    </div>
+    <div class="marquee-wrapper overflow-hidden">
+      <div class="marquee-track">
+        <div class="flex items-center gap-14 text-gray-400 font-semibold text-lg tracking-wide">
+          <span>Accurate</span><span>Jurnal</span><span>Mekari</span><span>Moka POS</span>
+          <span>Tokopedia</span><span>Shopee</span><span>WhatsApp Business</span><span>Xendit</span>
+        </div>
+        <div class="flex items-center gap-14 text-gray-400 font-semibold text-lg tracking-wide" aria-hidden="true">
+          <span>Accurate</span><span>Jurnal</span><span>Mekari</span><span>Moka POS</span>
+          <span>Tokopedia</span><span>Shopee</span><span>WhatsApp Business</span><span>Xendit</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     ONBOARDING STEPS — minimal numbered
+========================================================= -->
+<section class="py-24 border-t border-gray-100">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="text-center max-w-2xl mx-auto reveal">
+      <span class="eyebrow">Cara mulai</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">4 langkah, siap jalan</h2>
+    </div>
+
+    <div class="mt-14 grid md:grid-cols-4 gap-10 relative">
+      <div class="hidden md:block absolute top-5 left-[12%] right-[12%] h-px bg-gray-200"></div>
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-semibold text-sm relative z-10">1</div>
+        <h3 class="mt-5 font-display text-base font-bold">Daftar gratis</h3>
+        <p class="mt-2 text-sm text-gray-600">Registrasi supplier atau reseller dalam 2 menit.</p>
+      </div>
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-semibold text-sm relative z-10">2</div>
+        <h3 class="mt-5 font-display text-base font-bold">Verifikasi &amp; setup</h3>
+        <p class="mt-2 text-sm text-gray-600">Tim kami bantu verifikasi dokumen dan setup awal (1×24 jam).</p>
+      </div>
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-semibold text-sm relative z-10">3</div>
+        <h3 class="mt-5 font-display text-base font-bold">Mulai transaksi</h3>
+        <p class="mt-2 text-sm text-gray-600">Supplier upload produk / reseller mulai order via portal.</p>
+      </div>
+      <div class="relative">
+        <div class="w-10 h-10 rounded-full bg-brand-red text-white flex items-center justify-center font-semibold text-sm relative z-10">4</div>
+        <h3 class="mt-5 font-display text-base font-bold">Scale &amp; otomasi</h3>
+        <p class="mt-2 text-sm text-gray-600">Aktifkan AI OrderAgent, AR, analytics — bisnis tumbuh otomatis.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FAQ ACCORDION — minimal
+========================================================= -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-3xl mx-auto px-6">
+    <div class="text-center reveal">
+      <span class="eyebrow">FAQ</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">Pertanyaan yang sering ditanyakan</h2>
+    </div>
+
+    <div data-accordion class="mt-12 space-y-3">
+      <div data-accordion-item class="bg-white rounded-2xl overflow-hidden is-open">
+        <button data-accordion-trigger class="w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-bold">Apakah saya harus punya toko fisik untuk jadi reseller?</span>
+          <span class="text-2xl transition-transform">+</span>
+        </button>
+        <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed">Tidak. Anda bisa jadi reseller online, dropshipper dari rumah, atau owner toko fisik — semua bisa daftar. Pilihan model (wholesale/consignment/dropship) kami sesuaikan dengan kebutuhan Anda.</div>
+      </div>
+      <div data-accordion-item class="bg-white rounded-2xl overflow-hidden">
+        <button data-accordion-trigger class="w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-bold">Berapa minimum order untuk wholesale?</span>
+          <span class="text-2xl transition-transform">+</span>
+        </button>
+        <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed hidden">Mulai 1 karton per SKU untuk harga wholesale. Reward points bertambah seiring volume order.</div>
+      </div>
+      <div data-accordion-item class="bg-white rounded-2xl overflow-hidden">
+        <button data-accordion-trigger class="w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-bold">Bagaimana cara kerja FS OrderAgent?</span>
+          <span class="text-2xl transition-transform">+</span>
+        </button>
+        <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed hidden">Customer Anda cukup kirim order via WhatsApp/email/voice note — AI kami baca isinya (text/gambar/suara), cocokkan dengan katalog, dan otomatis buat order di sistem. Anda cukup konfirmasi.</div>
+      </div>
+      <div data-accordion-item class="bg-white rounded-2xl overflow-hidden">
+        <button data-accordion-trigger class="w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-bold">Produk saya butuh BPOM/Halal — bisa didistribusikan?</span>
+          <span class="text-2xl transition-transform">+</span>
+        </button>
+        <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed hidden">Bisa. Semua produk yang masuk ke platform kami harus ada sertifikasi BPOM dan Halal MUI. Tim kami bantu verifikasi saat onboarding.</div>
+      </div>
+      <div data-accordion-item class="bg-white rounded-2xl overflow-hidden">
+        <button data-accordion-trigger class="w-full flex items-center justify-between p-6 text-left">
+          <span class="font-display font-bold">Apa saja tools yang bisa diintegrasikan?</span>
+          <span class="text-2xl transition-transform">+</span>
+        </button>
+        <div class="px-6 pb-6 text-gray-600 text-sm leading-relaxed hidden">Accurate, Jurnal, Mekari Talenta, Moka POS, Tokopedia, Shopee, dan WhatsApp Business API. Integrasi baru ditambah berkala — request via form contact.</div>
+      </div>
+    </div>
+
+    <style>
+      [data-accordion-item]:not(.is-open) > div:not(button) { display: none; }
+      [data-accordion-item].is-open > button > span:last-child { transform: rotate(45deg); }
+    </style>
+  </div>
+</section>
+
+<!-- =========================================================
+     BLOG PREVIEW — minimal gray placeholders
+========================================================= -->
+<section class="py-24">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="flex items-end justify-between mb-10 gap-6 flex-wrap">
+      <div>
+        <span class="eyebrow">Insight</span>
+        <h2 class="heading-brand mt-4 text-4xl md:text-5xl">Tips &amp; tren industri snack</h2>
+      </div>
+      <a href="#" class="btn-secondary">Lihat semua artikel →</a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="card-hover bg-white rounded-3xl overflow-hidden border border-gray-100">
+        <div class="aspect-[16/10] bg-gray-100"></div>
+        <div class="p-6">
+          <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Tren · 5 min read</p>
+          <h3 class="mt-2 font-display text-lg font-bold">5 kategori snack yang paling laku di 2026</h3>
+          <p class="mt-2 text-sm text-gray-600">Data dari 30+ kota: keripik, wafer, dan snack sehat memimpin.</p>
+        </div>
+      </article>
+      <article class="card-hover bg-white rounded-3xl overflow-hidden border border-gray-100">
+        <div class="aspect-[16/10] bg-gray-100"></div>
+        <div class="p-6">
+          <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Guide · 8 min read</p>
+          <h3 class="mt-2 font-display text-lg font-bold">Panduan mulai bisnis dropship snack dari nol</h3>
+          <p class="mt-2 text-sm text-gray-600">Dari registrasi, pilih produk, sampai scaling ke ribuan order/bulan.</p>
+        </div>
+      </article>
+      <article class="card-hover bg-white rounded-3xl overflow-hidden border border-gray-100">
+        <div class="aspect-[16/10] bg-gray-100"></div>
+        <div class="p-6">
+          <p class="text-xs text-gray-500 uppercase tracking-widest font-semibold">Tech · 6 min read</p>
+          <h3 class="mt-2 font-display text-lg font-bold">Bagaimana AR mengubah cara konsumen pilih produk</h3>
+          <p class="mt-2 text-sm text-gray-600">Studi kasus 3 bulan implementasi AR di kemasan snack.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FINAL CTA — red block, minimal
+========================================================= -->
+<section class="py-24 bg-brand-red text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center reveal">
+    <h2 class="heading-brand text-4xl md:text-6xl">Siap scale bisnis snack Anda?</h2>
+    <p class="mt-5 text-white/80 text-lg max-w-2xl mx-auto">
+      Bergabung dengan 500+ mitra yang sudah tumbuh bersama Foodstocks. Gratis daftar, gratis onboarding.
+    </p>
+    <div class="mt-10 flex flex-wrap gap-3 justify-center">
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-brand-red font-semibold hover:bg-gray-100 transition">Mulai Jual Sekarang →</a>
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition">Request Demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+<footer class="bg-gray-950 text-gray-400 pt-20 pb-10">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="grid md:grid-cols-2 lg:grid-cols-6 gap-10 pb-16 border-b border-gray-800">
+      <div class="lg:col-span-2">
+        <img src="../assets/logo.png" alt="Foodstocks" class="h-10 w-auto bg-white rounded-xl p-2" />
+        <p class="mt-5 text-sm max-w-sm">Platform distribusi snack B2B terdepan di Indonesia. Menghubungkan 500+ supplier &amp; reseller di 30+ kota.</p>
+        <div class="mt-6 flex gap-3">
+          <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red flex items-center justify-center text-xs font-semibold">IG</a>
+          <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red flex items-center justify-center text-xs font-semibold">TT</a>
+          <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red flex items-center justify-center text-xs font-semibold">LI</a>
+          <a href="#" class="w-9 h-9 rounded-full bg-gray-800 hover:bg-brand-red flex items-center justify-center text-xs font-semibold">YT</a>
+        </div>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-4 text-sm">Solutions</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="solutions-supplier.html" class="hover:text-white">For Suppliers</a></li>
+          <li><a href="solutions-reseller.html" class="hover:text-white">For Resellers</a></li>
+          <li><a href="#" class="hover:text-white">Wholesale</a></li>
+          <li><a href="#" class="hover:text-white">Consignment</a></li>
+          <li><a href="#" class="hover:text-white">Dropship</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-4 text-sm">Technology</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="technology-order-agent.html" class="hover:text-white">FS OrderAgent</a></li>
+          <li><a href="technology-ar.html" class="hover:text-white">AR Product Viz</a></li>
+          <li><a href="#" class="hover:text-white">Smart WMS</a></li>
+          <li><a href="#" class="hover:text-white">Analytics</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-4 text-sm">Company</p>
+        <ul class="space-y-2 text-sm">
+          <li><a href="#" class="hover:text-white">About</a></li>
+          <li><a href="case-study-detail.html" class="hover:text-white">Case Studies</a></li>
+          <li><a href="pricing.html" class="hover:text-white">Pricing</a></li>
+          <li><a href="#" class="hover:text-white">Blog</a></li>
+          <li><a href="#" class="hover:text-white">Careers</a></li>
+          <li><a href="#" class="hover:text-white">Press</a></li>
+        </ul>
+      </div>
+      <div>
+        <p class="text-white font-semibold mb-4 text-sm">Newsletter</p>
+        <p class="text-sm mb-4">Insight industri snack, langsung ke inbox Anda.</p>
+        <form class="flex gap-2">
+          <input type="email" placeholder="Email Anda" class="flex-1 px-4 py-2 rounded-full bg-gray-900 border border-gray-800 text-sm focus:border-brand-orange outline-none" />
+          <button class="btn-primary py-2 px-4 text-sm">→</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="pt-8 flex flex-wrap justify-between items-center gap-4 text-xs">
+      <p>© 2026 PT Foodstocks Indonesia. All rights reserved.</p>
+      <div class="flex gap-6">
+        <a href="#" class="hover:text-white">Privacy</a>
+        <a href="#" class="hover:text-white">Terms</a>
+        <a href="#" class="hover:text-white">Security</a>
+      </div>
+      <div class="flex items-center gap-2">
+        <span class="text-[10px] px-2 py-1 bg-gray-900 rounded">BPOM</span>
+        <span class="text-[10px] px-2 py-1 bg-gray-900 rounded">Halal MUI</span>
+        <span class="text-[10px] px-2 py-1 bg-gray-900 rounded">BBI</span>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="_shared.js"></script>
+<script>
+  // Tab active state styling
+  document.querySelectorAll('[data-tab-trigger]').forEach(t => {
+    t.addEventListener('click', () => {
+      document.querySelectorAll('[data-tab-trigger]').forEach(b => {
+        b.classList.remove('is-active');
+        b.style.background = 'white';
+        b.style.color = '#0F172A';
+        b.style.borderColor = '#E5E7EB';
+      });
+      t.classList.add('is-active');
+      t.style.background = '#0F172A';
+      t.style.color = 'white';
+      t.style.border = 'none';
+    });
+  });
+</script>
+</body>
+</html>

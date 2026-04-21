@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AR Product Viz · Scan Kemasan, Pengalaman Hidup · Foodstocks</title>
+  <meta name="description" content="Augmented Reality untuk kemasan snack. Scan → model 3D, resep, info nutrisi, video how-to. Pertama di industri distribusi snack Indonesia." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@500;600;700;800&family=Fredoka:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="_styles.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="_config.js"></script>
+</head>
+<body class="bg-white text-brand-ink overflow-x-hidden">
+
+<div class="bg-brand-ink text-white text-xs">
+  <div class="max-w-8xl mx-auto px-6 py-2 flex items-center justify-between">
+    <div class="flex items-center gap-4 text-white/80"><button data-lang-toggle class="font-semibold hover:text-brand-orange transition">ID</button><span class="text-white/20">|</span><a href="tel:+62211234567" class="hidden sm:inline hover:text-brand-orange">+62 21 1234 5678</a></div>
+    <div class="flex items-center gap-4 text-white/70"><a href="#" class="hover:text-brand-orange">IG</a><a href="#" class="hover:text-brand-orange">LinkedIn</a></div>
+  </div>
+</div>
+
+<header class="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+  <nav class="max-w-8xl mx-auto px-6 py-4 flex items-center justify-between gap-6">
+    <a href="home.html" class="flex-shrink-0"><img src="../assets/logo.png" alt="Foodstocks" class="h-10 w-auto" /></a>
+    <div class="hidden lg:flex items-center gap-1">
+      <a class="btn-ghost" href="solutions-supplier.html">Solutions</a>
+      <a class="btn-ghost text-brand-red" href="technology-order-agent.html">Technology</a>
+      <a class="btn-ghost" href="case-study-detail.html">Case Studies</a>
+      <a class="btn-ghost" href="pricing.html">Pricing</a>
+    </div>
+    <div class="flex items-center gap-2"><a class="btn-ghost hidden md:inline-flex" href="#">Login</a><a class="btn-primary text-sm" href="#">Request Demo</a></div>
+  </nav>
+</header>
+
+<!-- HERO -->
+<section class="relative bg-white">
+  <div class="max-w-8xl mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+    <div class="lg:col-span-6 reveal">
+      <span class="eyebrow">Teknologi Eksklusif</span>
+      <h1 class="heading-brand mt-6 text-[clamp(2.5rem,5vw+1rem,5rem)]">
+        Scan kemasan,<br/><span class="text-brand-red">produk jadi hidup.</span>
+      </h1>
+      <p class="mt-6 text-lg text-gray-600 max-w-xl">
+        AR Product Viz — pertama di industri distribusi snack Indonesia. Customer scan QR di kemasan, lihat 3D produk, resep, info nutrisi, dan video how-to langsung di HP.
+      </p>
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#" class="btn-primary">Aktifkan AR untuk Produk Anda →</a>
+        <a href="#demo" class="btn-secondary">Lihat contoh</a>
+      </div>
+      <div class="mt-10 grid grid-cols-3 gap-4 max-w-md border-t border-gray-100 pt-6">
+        <div><p class="heading-brand text-2xl text-brand-red">#1</p><p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Di industri snack ID</p></div>
+        <div><p class="heading-brand text-2xl text-brand-red">4×</p><p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Engagement vs label biasa</p></div>
+        <div><p class="heading-brand text-2xl text-brand-red">No app</p><p class="text-xs text-gray-500 mt-1 uppercase tracking-wider">Buka langsung di browser</p></div>
+      </div>
+    </div>
+
+    <!-- Phone mockup showing AR preview -->
+    <div class="lg:col-span-6 reveal relative flex justify-center">
+      <div class="relative w-full max-w-[340px] aspect-[9/19] rounded-[40px] bg-gray-900 p-2 shadow-soft">
+        <div class="w-full h-full rounded-[32px] bg-gradient-to-b from-gray-50 to-white overflow-hidden relative">
+          <!-- status bar -->
+          <div class="absolute top-0 left-0 right-0 h-8 flex items-center justify-between px-6 text-[10px] font-semibold z-10">
+            <span>9:41</span>
+            <div class="flex gap-1 items-center"><span>•••</span><span>▮▮</span><span>🔋</span></div>
+          </div>
+          <!-- notch -->
+          <div class="absolute top-1 left-1/2 -translate-x-1/2 w-24 h-6 bg-gray-900 rounded-full z-20"></div>
+          <!-- AR view content -->
+          <div class="pt-10 px-4 pb-4 h-full flex flex-col">
+            <div class="text-center mb-3">
+              <p class="text-[10px] text-gray-500 uppercase tracking-wider">AR Preview</p>
+              <p class="font-display font-bold text-sm">Chitato Keju 68g</p>
+            </div>
+            <!-- 3D product placeholder -->
+            <div class="flex-1 bg-gradient-to-br from-brand-red/5 to-brand-red/20 rounded-2xl relative flex items-center justify-center overflow-hidden">
+              <div class="absolute inset-0 flex items-center justify-center">
+                <div class="w-40 h-48 bg-gradient-to-b from-brand-red to-red-700 rounded-lg shadow-2xl transform rotate-6">
+                  <div class="p-4 text-white">
+                    <p class="text-[8px] uppercase">Potato Chips</p>
+                    <p class="font-display font-bold text-sm mt-1">Chitato</p>
+                    <p class="text-[10px]">Keju</p>
+                    <div class="mt-10 text-center">
+                      <p class="text-[8px]">68g</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- AR markers -->
+              <div class="absolute top-4 left-4 w-4 h-4 border-t-2 border-l-2 border-brand-red"></div>
+              <div class="absolute top-4 right-4 w-4 h-4 border-t-2 border-r-2 border-brand-red"></div>
+              <div class="absolute bottom-4 left-4 w-4 h-4 border-b-2 border-l-2 border-brand-red"></div>
+              <div class="absolute bottom-4 right-4 w-4 h-4 border-b-2 border-r-2 border-brand-red"></div>
+              <!-- 360 badge -->
+              <div class="absolute top-3 right-3 text-[9px] bg-white/90 backdrop-blur px-2 py-0.5 rounded-full font-bold text-brand-red">360°</div>
+            </div>
+            <!-- Tabs -->
+            <div class="mt-3 flex gap-1 text-[10px]">
+              <button class="flex-1 py-1.5 rounded-lg bg-brand-red text-white font-semibold">3D</button>
+              <button class="flex-1 py-1.5 rounded-lg bg-gray-100 text-gray-600 font-semibold">Resep</button>
+              <button class="flex-1 py-1.5 rounded-lg bg-gray-100 text-gray-600 font-semibold">Nutrisi</button>
+              <button class="flex-1 py-1.5 rounded-lg bg-gray-100 text-gray-600 font-semibold">Video</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CAPABILITIES -->
+<section class="py-24 bg-gray-50">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="max-w-2xl mb-14 reveal">
+      <span class="eyebrow">Fitur AR</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">4 experience dalam 1 scan.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
+      <article class="bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9"/></svg>
+        <h3 class="font-display text-lg font-bold">Model 3D interaktif</h3>
+        <p class="mt-2 text-sm text-gray-600">Putar, zoom, cek dari segala sisi. Kemasan produk jadi showroom digital.</p>
+      </article>
+      <article class="bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 3.104v5.714a2.25 2.25 0 01-.659 1.591L5 14.5M9.75 3.104c-.251.023-.501.05-.75.082m.75-.082a24.301 24.301 0 014.5 0m0 0v5.714c0 .597.237 1.17.659 1.591L19.8 15.3M14.25 3.104c.251.023.501.05.75.082M19.8 15.3l-1.57.393A9.065 9.065 0 0112 15a9.065 9.065 0 00-6.23-.693L5 14.5m14.8.8l1.402 1.402c1.232 1.232.65 3.318-1.067 3.611A48.309 48.309 0 0112 21c-2.773 0-5.491-.235-8.135-.687-1.718-.293-2.3-2.379-1.067-3.61L5 14.5"/></svg>
+        <h3 class="font-display text-lg font-bold">Resep &amp; pairing</h3>
+        <p class="mt-2 text-sm text-gray-600">Cara penyajian, kombinasi produk, ide resep — inspirasi untuk end-consumer.</p>
+      </article>
+      <article class="bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 12h16.5m-16.5 3.75h16.5M3.75 19.5h16.5M5.625 4.5h12.75a1.875 1.875 0 010 3.75H5.625a1.875 1.875 0 010-3.75z"/></svg>
+        <h3 class="font-display text-lg font-bold">Info nutrisi</h3>
+        <p class="mt-2 text-sm text-gray-600">Tabel gizi, allergen, ingredients dalam format visual. Bantu konsumen choose wisely.</p>
+      </article>
+      <article class="bg-white border border-gray-100 rounded-3xl p-7">
+        <svg class="w-8 h-8 text-brand-red mb-6" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5.25 5.653c0-.856.917-1.398 1.667-.986l11.54 6.348a1.125 1.125 0 010 1.971l-11.54 6.347a1.125 1.125 0 01-1.667-.985V5.653z"/></svg>
+        <h3 class="font-display text-lg font-bold">Video how-to</h3>
+        <p class="mt-2 text-sm text-gray-600">Cuplikan produksi, cerita brand, atau tutorial — langsung di mobile.</p>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- FOR SUPPLIERS vs FOR CONSUMERS -->
+<section id="demo" class="py-24">
+  <div class="max-w-8xl mx-auto px-6">
+    <div class="max-w-2xl mb-14 reveal">
+      <span class="eyebrow">Benefit</span>
+      <h2 class="heading-brand mt-4 text-4xl md:text-5xl">Menang di kedua sisi.</h2>
+    </div>
+    <div class="grid md:grid-cols-2 gap-4">
+      <article class="bg-gray-50 rounded-3xl p-8 border border-gray-100">
+        <p class="text-xs font-semibold uppercase tracking-widest text-brand-red">Untuk Supplier</p>
+        <h3 class="heading-brand text-3xl mt-3">Brand experience yang memorable.</h3>
+        <ul class="mt-6 space-y-3">
+          <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Stand out di rak — packaging AR adalah diferensiator</li>
+          <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Data engagement: siapa scan, berapa lama, produk mana paling dilihat</li>
+          <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Update konten AR tanpa reprint kemasan (cloud-based)</li>
+        </ul>
+      </article>
+      <article class="bg-gray-50 rounded-3xl p-8 border border-gray-100">
+        <p class="text-xs font-semibold uppercase tracking-widest text-brand-red">Untuk End-Consumer</p>
+        <h3 class="heading-brand text-3xl mt-3">Lebih dari sekadar label belakang.</h3>
+        <ul class="mt-6 space-y-3">
+          <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Langsung bisa cek nutrisi, halal, allergen sebelum beli</li>
+          <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> Ide resep &amp; pairing langsung di HP — konten shareable</li>
+          <li class="flex gap-3 text-sm"><span class="flex-shrink-0 w-5 h-5 rounded-full bg-brand-red/10 text-brand-red flex items-center justify-center text-xs">✓</span> No app download — WebAR langsung di browser (Chrome/Safari)</li>
+        </ul>
+      </article>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="py-24 bg-brand-red text-white">
+  <div class="max-w-4xl mx-auto px-6 text-center">
+    <h2 class="heading-brand text-4xl md:text-6xl">Bawa produk Anda ke AR.</h2>
+    <p class="mt-5 text-white/80 text-lg">Tim kami bantu produksi asset 3D + setup QR dalam 2 minggu.</p>
+    <div class="mt-10 flex flex-wrap gap-3 justify-center">
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-white text-brand-red font-semibold hover:bg-gray-100 transition">Mulai Setup AR →</a>
+      <a href="#" class="inline-flex items-center gap-2 px-6 py-3 rounded-full border border-white/30 text-white font-semibold hover:bg-white/10 transition">Konsultasi gratis</a>
+    </div>
+  </div>
+</section>
+
+<footer class="bg-gray-950 text-gray-400 pt-16 pb-8">
+  <div class="max-w-8xl mx-auto px-6 grid md:grid-cols-4 gap-8 pb-10 border-b border-gray-800">
+    <div><img src="../assets/logo.png" alt="Foodstocks" class="h-10 w-auto bg-white rounded-xl p-2" /><p class="mt-4 text-sm">Platform distribusi snack B2B Indonesia.</p></div>
+    <div><p class="text-white font-semibold text-sm mb-3">Solutions</p><ul class="space-y-2 text-sm"><li><a href="solutions-supplier.html" class="hover:text-white">For Suppliers</a></li><li><a href="solutions-reseller.html" class="hover:text-white">For Resellers</a></li></ul></div>
+    <div><p class="text-white font-semibold text-sm mb-3">Technology</p><ul class="space-y-2 text-sm"><li><a href="technology-order-agent.html" class="hover:text-white">FS OrderAgent</a></li><li><a href="technology-ar.html" class="hover:text-white">AR Product Viz</a></li></ul></div>
+    <div><p class="text-white font-semibold text-sm mb-3">Company</p><ul class="space-y-2 text-sm"><li><a href="case-study-detail.html" class="hover:text-white">Case Studies</a></li><li><a href="pricing.html" class="hover:text-white">Pricing</a></li><li><a href="home.html" class="hover:text-white">Home</a></li></ul></div>
+  </div>
+  <div class="max-w-8xl mx-auto px-6 pt-6 flex flex-wrap justify-between gap-4 text-xs">
+    <p>© 2026 PT Foodstocks Indonesia</p>
+    <div class="flex gap-6"><a href="#" class="hover:text-white">Privacy</a><a href="#" class="hover:text-white">Terms</a></div>
+  </div>
+</footer>
+
+<script src="_shared.js"></script>
+</body>
+</html>

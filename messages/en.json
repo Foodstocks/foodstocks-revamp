@@ -1,0 +1,76 @@
+{
+  "topBar": {
+    "phone": "+62 21 1234 5678",
+    "email": "hello@foodstocks.id"
+  },
+  "nav": {
+    "solutions": "Solutions",
+    "technology": "Technology",
+    "caseStudies": "Case Studies",
+    "pricing": "Pricing",
+    "blog": "Blog",
+    "login": "Login",
+    "requestDemo": "Request Demo"
+  },
+  "megaMenu": {
+    "forSuppliers": "For Suppliers",
+    "forResellers": "For Resellers",
+    "distributionNetwork": "Distribution Network",
+    "distributionNetworkDesc": "30+ cities, integrated logistics",
+    "supplierPortal": "Supplier Portal",
+    "supplierPortalDesc": "Real-time analytics dashboard",
+    "qualityWarehousing": "Quality Warehousing",
+    "qualityWarehousingDesc": "Cold storage · food-grade",
+    "wholesale": "Wholesale",
+    "wholesaleDesc": "Bulk order best price",
+    "consignment": "Consignment",
+    "consignmentDesc": "Zero upfront · pay when sold",
+    "dropship": "Dropship",
+    "dropshipDesc": "No stock · custom branding",
+    "orderAgentBadge": "New",
+    "orderAgentTitle": "FS OrderAgent",
+    "orderAgentDesc": "AI captures orders from WhatsApp, email, and PO photos — automatically into your system.",
+    "orderAgentCta": "See demo →",
+    "orderAgentShort": "AI order capture",
+    "arShort": "3D, recipes, nutrition",
+    "new": "NEW"
+  },
+  "mobileMenu": {
+    "forSuppliers": "For Suppliers",
+    "forResellers": "For Resellers"
+  },
+  "footer": {
+    "tagline": "Leading B2B snack distribution platform in Indonesia. Connecting 500+ suppliers & resellers across 30+ cities.",
+    "solutions": "Solutions",
+    "technology": "Technology",
+    "company": "Company",
+    "newsletter": "Newsletter",
+    "newsletterDesc": "Snack industry insights, straight to your inbox.",
+    "newsletterPlaceholder": "Your email",
+    "about": "About",
+    "blog": "Blog",
+    "careers": "Careers",
+    "press": "Press",
+    "smartWms": "Smart WMS",
+    "analytics": "Analytics",
+    "copyright": "© 2026 PT Foodstocks Indonesia. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "security": "Security"
+  },
+  "home": {
+    "hero": {
+      "eyebrow": "B2B Snack Distribution Platform",
+      "titleBefore": "A warehouse of",
+      "titleHighlight": "snacks",
+      "titleAfter": "for your business.",
+      "description": "Unified B2B snack distribution: AI order capture, AR products, and logistics in 30+ cities. Wholesale, consignment, or dropship — choose what fits.",
+      "ctaPrimary": "Start Selling Now",
+      "ctaSecondary": "Become a Supplier",
+      "statSku": "SKUs",
+      "statMitra": "Partners",
+      "statKota": "Cities",
+      "statReliability": "Reliability"
+    }
+  }
+}
