@@ -1,0 +1,17 @@
+# Vercel-specific ignore rules (separate from .gitignore).
+# Keeps upload bundle small + avoids 100 MB file limit.
+
+# Large local assets (user's reference files, not for deploy)
+Brand Guideline Foodstocks.pdf
+logo utama.png
+screencapture-*.png
+
+# Phase 1 static HTML mockups (dev reference only, not served by Next.js)
+mockups/
+
+# Local assets folder (logo sudah di-copy ke public/)
+assets/
+
+# Dev tooling
+.claude/
+.next/
