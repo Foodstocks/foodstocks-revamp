@@ -123,7 +123,12 @@ export function Header() {
         </div>
 
         <div className="flex items-center gap-2">
-          <a href="#" className="hidden md:inline-flex px-3 py-2 font-medium text-sm hover:text-brand-red">{t('login')}</a>
+          <Link href="/shop" className="hidden md:inline-flex items-center gap-1.5 px-3 py-2 font-medium text-sm hover:text-brand-red">
+            <svg className="w-4 h-4" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272" />
+            </svg>
+            Shop
+          </Link>
           <Button href="#" size="sm">{t('requestDemo')}</Button>
           <button
             className="lg:hidden p-2"
