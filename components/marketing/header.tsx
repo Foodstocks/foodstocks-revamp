@@ -179,20 +179,30 @@ export function Header() {
         {openMenu === 'solutions' && (
           <div className="max-w-[82rem] mx-auto px-6 flex min-h-[220px]">
             {/* Left sidebar */}
-            <div className="w-56 flex-shrink-0 py-5 px-3 bg-[#F7F8FA] rounded-xl mr-6 flex flex-col">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-1 mb-2">Solutions</p>
+            <div className="w-60 flex-shrink-0 py-5 px-3 bg-[#E8EAED] rounded-xl mr-6 flex flex-col">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 px-2 mb-3">Solutions</p>
               {([
-                { key: 'supplier' as const, title: 'Untuk Supplier', desc: 'Distribusi & produksi' },
-                { key: 'reseller' as const, title: 'Untuk Reseller', desc: 'Jual lebih banyak' },
-              ] as const).map(({ key, title, desc }) => (
+                { key: 'supplier' as const, title: 'Untuk Supplier', desc: 'Distribusi & produksi',
+                  iconPath: 'M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12' },
+                { key: 'reseller' as const, title: 'Untuk Reseller', desc: 'Jual lebih banyak',
+                  iconPath: 'M13.5 21v-7.5a.75.75 0 01.75-.75h3a.75.75 0 01.75.75V21m-4.5 0H2.36m11.14 0H18m0 0h3.64m-1.39 0V9.349m-16.5 11.65V9.35m0 0a3.001 3.001 0 003.75-.615A2.993 2.993 0 009.75 9.75c.896 0 1.7-.393 2.25-1.016a2.993 2.993 0 002.25 1.016c.896 0 1.7-.393 2.25-1.016a3.001 3.001 0 003.75.614m-16.5 0a3.004 3.004 0 01-.621-4.72L4.318 3.44A1.5 1.5 0 015.378 3h13.243a1.5 1.5 0 011.06.44l1.19 1.189a3 3 0 01-.621 4.72m-13.5 8.65h3.75a.75.75 0 00.75-.75V13.5a.75.75 0 00-.75-.75H6.75a.75.75 0 00-.75.75v3.75c0 .415.336.75.75.75z' },
+              ] as const).map(({ key, title, desc, iconPath }) => (
                 <button key={key} type="button" onMouseEnter={() => setSolutionsTab(key)}
-                  className={`w-full text-left px-4 py-3 rounded-xl transition-all flex items-center justify-between mb-1 ${
+                  className={`w-full text-left px-3 py-3.5 rounded-xl transition-all duration-150 flex items-center gap-3 mb-1.5 cursor-pointer group border-l-[3px] ${
                     solutionsTab === key
-                      ? 'bg-white shadow-sm border border-gray-200'
-                      : 'hover:bg-white/60'
+                      ? 'bg-white shadow-md border-l-brand-red'
+                      : 'border-l-transparent hover:bg-white/80 hover:shadow-sm hover:border-l-gray-300'
                   }`}>
-                  <div>
-                    <p className={`text-sm font-bold transition-colors ${solutionsTab === key ? 'text-brand-red' : 'text-gray-800'}`}>{title}</p>
+                  <span className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-all ${
+                    solutionsTab === key ? 'bg-red-50' : 'bg-white/70 group-hover:bg-white'
+                  }`}>
+                    <svg className={`w-[18px] h-[18px] transition-colors ${solutionsTab === key ? 'text-brand-red' : 'text-gray-400 group-hover:text-brand-red'}`}
+                      fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" d={iconPath} />
+                    </svg>
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className={`text-sm font-bold transition-colors leading-tight ${solutionsTab === key ? 'text-brand-red' : 'text-gray-700 group-hover:text-gray-900'}`}>{title}</p>
                     <p className="text-[11px] text-gray-500 mt-0.5">{desc}</p>
                   </div>
                   <ChevronRight />
@@ -252,20 +262,30 @@ export function Header() {
         {openMenu === 'technology' && (
           <div className="max-w-[82rem] mx-auto px-6 flex min-h-[220px]">
             {/* Left sidebar */}
-            <div className="w-56 flex-shrink-0 py-5 px-3 bg-[#F7F8FA] rounded-xl mr-6 flex flex-col">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-1 mb-2">Technology</p>
+            <div className="w-60 flex-shrink-0 py-5 px-3 bg-[#E8EAED] rounded-xl mr-6 flex flex-col">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-500 px-2 mb-3">Technology</p>
               {([
-                { key: 'retail' as const, title: 'Retail & Catalog', desc: 'AR, 3D, smart browse' },
-                { key: 'ops'    as const, title: 'Operasional',       desc: 'AI order, WMS, analytics' },
-              ] as const).map(({ key, title, desc }) => (
+                { key: 'retail' as const, title: 'Retail & Catalog', desc: 'AR, 3D, smart browse',
+                  iconPath: 'M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9' },
+                { key: 'ops'    as const, title: 'Operasional',       desc: 'AI order, WMS, analytics',
+                  iconPath: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z' },
+              ] as const).map(({ key, title, desc, iconPath }) => (
                 <button key={key} type="button" onMouseEnter={() => setTechTab(key)}
-                  className={`w-full text-left px-4 py-3 rounded-xl transition-all flex items-center justify-between mb-1 ${
+                  className={`w-full text-left px-3 py-3.5 rounded-xl transition-all duration-150 flex items-center gap-3 mb-1.5 cursor-pointer group border-l-[3px] ${
                     techTab === key
-                      ? 'bg-white shadow-sm border border-gray-200'
-                      : 'hover:bg-white/60'
+                      ? 'bg-white shadow-md border-l-brand-red'
+                      : 'border-l-transparent hover:bg-white/80 hover:shadow-sm hover:border-l-gray-300'
                   }`}>
-                  <div>
-                    <p className={`text-sm font-bold transition-colors ${techTab === key ? 'text-brand-red' : 'text-gray-800'}`}>{title}</p>
+                  <span className={`w-9 h-9 rounded-lg flex items-center justify-center flex-shrink-0 transition-all ${
+                    techTab === key ? 'bg-red-50' : 'bg-white/70 group-hover:bg-white'
+                  }`}>
+                    <svg className={`w-[18px] h-[18px] transition-colors ${techTab === key ? 'text-brand-red' : 'text-gray-400 group-hover:text-brand-red'}`}
+                      fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" d={iconPath} />
+                    </svg>
+                  </span>
+                  <div className="min-w-0 flex-1">
+                    <p className={`text-sm font-bold transition-colors leading-tight ${techTab === key ? 'text-brand-red' : 'text-gray-700 group-hover:text-gray-900'}`}>{title}</p>
                     <p className="text-[11px] text-gray-500 mt-0.5">{desc}</p>
                   </div>
                   <ChevronRight />
