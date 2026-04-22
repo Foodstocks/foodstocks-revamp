@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import heroImg from '@/assets/hero-section.png';
 import { useTranslations } from 'next-intl';
 import { Button } from '@/components/ui/button';
 import { StatCounter } from '@/components/marketing/stat-counter';
@@ -104,8 +103,10 @@ export function Hero() {
         <Reveal className="lg:col-span-5 relative flex items-center justify-center">
           <div className="absolute inset-0 -z-10 rounded-full bg-white/15 blur-3xl scale-110" aria-hidden />
           <Image
-            src={heroImg}
+            src="/hero-section.png"
             alt="Foodstocks platform dashboard"
+            width={800}
+            height={600}
             className="w-full h-auto object-contain drop-shadow-2xl"
             priority
           />
