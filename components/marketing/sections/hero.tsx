@@ -7,7 +7,7 @@ export function Hero() {
   const t = useTranslations('home.hero');
 
   return (
-    <section className="relative overflow-hidden hero-bg">
+    <section className="relative overflow-hidden hero-bg min-h-[calc(100vh-68px)] flex flex-col justify-center">
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none select-none" aria-hidden>
         <div className="absolute -top-32 -right-24 w-[700px] h-[600px] rounded-full bg-white/8 blur-3xl" />
@@ -15,10 +15,10 @@ export function Hero() {
         <div className="bg-dot-grid-white absolute inset-0 opacity-70" />
       </div>
 
-      <div className="relative max-w-[82rem] mx-auto px-6 pt-10 pb-12 lg:pt-16 lg:pb-20 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <div className="relative max-w-[82rem] mx-auto px-6 py-8 lg:py-10 grid lg:grid-cols-12 gap-8 lg:gap-12 items-center w-full">
 
         {/* ── Left column ── */}
-        <Reveal className="lg:col-span-6">
+        <Reveal className="lg:col-span-7">
 
           {/* Social proof pill */}
           <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 border border-white/40 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.20)] mb-5">
@@ -41,7 +41,7 @@ export function Hero() {
             </div>
           </div>
 
-          <h1 className="heading-brand text-[clamp(2.75rem,5.5vw+1rem,5.5rem)] leading-[1.02] text-white">
+          <h1 className="heading-brand text-[clamp(2.25rem,4vw+1rem,4.25rem)] leading-[1.05] text-white">
             {t('titleBefore')}{' '}
             <span className="text-yellow-300 drop-shadow-sm">{t('titleHighlight')}</span>,<br />
             {t('titleAfter')}
@@ -67,7 +67,7 @@ export function Hero() {
             ))}
           </div>
 
-          <div className="mt-8 flex flex-wrap gap-3">
+          <div className="mt-6 flex flex-wrap gap-3">
             <Button href="/contact" size="lg" className="bg-white text-brand-red hover:bg-white/90 shadow-lg font-bold">
               {t('ctaPrimary')}
               <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
@@ -80,7 +80,7 @@ export function Hero() {
           </div>
 
           {/* Stats row */}
-          <div className="mt-8 pt-6 border-t border-white/20 grid grid-cols-4 gap-0 max-w-lg">
+          <div className="mt-6 pt-5 border-t border-white/20 grid grid-cols-4 gap-0 max-w-lg">
             {[
               { to: 923, suffix: '+', label: t('statSku') },
               { to: 500, suffix: '+', label: t('statMitra') },
@@ -99,7 +99,7 @@ export function Hero() {
         </Reveal>
 
         {/* ── Right column — dashboard mockup ── */}
-        <Reveal className="lg:col-span-6 relative">
+        <Reveal className="lg:col-span-5 relative">
           <div className="absolute inset-4 -z-10 rounded-full bg-white/20 blur-3xl scale-125" aria-hidden />
 
           <div className="relative rounded-3xl overflow-hidden bg-white border border-gray-200/80 shadow-[0_24px_64px_-16px_rgba(15,23,42,0.16)]">
@@ -118,7 +118,7 @@ export function Hero() {
               </div>
             </div>
 
-            <div className="p-5 space-y-4 bg-[#FAFAF9]">
+            <div className="p-4 space-y-3 bg-[#FAFAF9]">
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-[10px] text-gray-400 uppercase tracking-wider">Selamat datang,</p>
@@ -162,25 +162,19 @@ export function Hero() {
                 </div>
               </div>
 
-              <div>
-                <p className="text-[10px] font-bold text-gray-500 uppercase tracking-wider mb-2">Pesanan Terbaru</p>
-                <div className="space-y-1.5">
-                  {[
-                    { name: 'Chitato Keju · 2 karton', id: '#FS-2842', status: 'Diproses', color: 'amber' },
-                    { name: 'Indomie Goreng · 5 karton', id: '#FS-2841', status: 'Dikirim',  color: 'blue' },
-                  ].map((o) => (
-                    <div key={o.id} className="bg-white rounded-xl border border-gray-100 p-2.5 flex items-center gap-3">
-                      <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-red-50 to-brand-red-100 flex-shrink-0" aria-hidden />
-                      <div className="flex-1 min-w-0">
-                        <p className="text-[11px] font-semibold truncate">{o.name}</p>
-                        <p className="text-[9px] text-gray-400">{o.id}</p>
-                      </div>
-                      <span className={`text-[9px] font-bold px-1.5 py-0.5 rounded-full whitespace-nowrap ${o.color === 'amber' ? 'bg-amber-50 text-amber-700' : 'bg-blue-50 text-blue-700'}`}>
-                        {o.status}
-                      </span>
-                    </div>
-                  ))}
+              <div className="bg-white rounded-2xl border border-gray-100 p-3 shadow-[0_1px_4px_-1px_rgba(15,23,42,0.06)] flex items-center justify-between">
+                <div className="flex items-center gap-2.5">
+                  <div className="w-7 h-7 rounded-lg bg-gradient-to-br from-brand-red/20 to-brand-red/10 flex items-center justify-center flex-shrink-0">
+                    <svg className="w-3.5 h-3.5 text-brand-red" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
+                      <path strokeLinecap="round" strokeLinejoin="round" d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-[11px] font-semibold text-gray-800">Order #FS-2843 dibuat otomatis</p>
+                    <p className="text-[9px] text-gray-400">FS OrderAgent · via WhatsApp</p>
+                  </div>
                 </div>
+                <span className="text-[9px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 whitespace-nowrap">✓ AI</span>
               </div>
             </div>
           </div>

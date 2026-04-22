@@ -106,15 +106,15 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
-      <div className="max-w-[82rem] mx-auto px-6 h-[68px] flex items-center gap-8">
+      <div className="max-w-[82rem] mx-auto px-6 h-[68px] flex items-center gap-8 relative">
 
         {/* ── Logo ── */}
         <Link href="/" className="flex-shrink-0">
           <Image src="/logo.png" alt="Foodstocks" width={140} height={36} className="h-9 w-auto" priority />
         </Link>
 
-        {/* ── Desktop nav ── */}
-        <nav className="hidden lg:flex items-center gap-0.5 flex-1" aria-label="Main navigation">
+        {/* ── Desktop nav — absolutely centered on page ── */}
+        <nav className="hidden lg:flex items-center gap-0.5 absolute left-1/2 -translate-x-1/2 z-10" aria-label="Main navigation">
 
           {/* Solutions trigger */}
           <button type="button"
@@ -178,7 +178,7 @@ export function Header() {
 
       {/* ── Full-width mega dropdown (Ukirama layout) ── */}
       <div
-        className={`absolute left-0 right-0 top-full bg-white border-t border-gray-100 shadow-[0_20px_40px_-10px_rgba(15,23,42,0.10)] z-50 transition-all duration-[180ms] ease-out ${
+        className={`absolute left-0 right-0 top-full bg-white border-t-2 border-brand-red shadow-[0_20px_40px_-10px_rgba(15,23,42,0.12)] z-50 transition-all duration-[180ms] ease-out ${
           hasPanel ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
         }`}
         onMouseEnter={() => openMenu && menuEnter(openMenu)}
