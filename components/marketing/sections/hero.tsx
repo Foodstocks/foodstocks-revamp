@@ -15,13 +15,13 @@ export function Hero() {
         <div className="bg-dot-grid-white absolute inset-0 opacity-70" />
       </div>
 
-      <div className="relative max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-28 lg:pb-32 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+      <div className="relative max-w-[82rem] mx-auto px-6 pt-10 pb-12 lg:pt-16 lg:pb-20 grid lg:grid-cols-12 gap-10 lg:gap-14 items-center">
 
         {/* ── Left column ── */}
         <Reveal className="lg:col-span-6">
 
           {/* Social proof pill */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 border border-white/40 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.20)] mb-7">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 border border-white/40 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.20)] mb-5">
             <div className="flex items-center -space-x-1">
               {['bg-orange-400','bg-amber-400','bg-red-400','bg-pink-400'].map((c, i) => (
                 <span key={i} className={`w-5 h-5 rounded-full border-2 border-white ${c}`} aria-hidden />
@@ -80,7 +80,7 @@ export function Hero() {
           </div>
 
           {/* Stats row */}
-          <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-4 gap-0 max-w-lg">
+          <div className="mt-8 pt-6 border-t border-white/20 grid grid-cols-4 gap-0 max-w-lg">
             {[
               { to: 923, suffix: '+', label: t('statSku') },
               { to: 500, suffix: '+', label: t('statMitra') },
