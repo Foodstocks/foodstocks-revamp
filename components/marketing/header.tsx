@@ -3,8 +3,7 @@
 import Image from 'next/image';
 import { useState, useRef } from 'react';
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
-import { Link, usePathname, useRouter } from '@/i18n/navigation';
+import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 
 /* ── small icon (no colored bg chip — Ukirama style) ── */
@@ -85,13 +84,9 @@ export function Header() {
   const [openMenu, setOpenMenu]           = useState<string | null>(null);
   const timerRef                          = useRef<ReturnType<typeof setTimeout> | null>(null);
 
-  const t        = useTranslations('nav');
-  const locale   = useLocale();
-  const pathname = usePathname();
-  const router   = useRouter();
+  const t = useTranslations('nav');
 
   function toggleSection(s: string) { setMobileSection((p) => (p === s ? null : s)); }
-  function toggleLocale() { router.replace(pathname, { locale: locale === 'id' ? 'en' : 'id' }); }
   function closeMobile() { setMobileOpen(false); }
 
   function menuEnter(name: string) {
@@ -114,13 +109,15 @@ export function Header() {
         </Link>
 
         {/* ── Desktop nav — absolutely centered on page ── */}
-        <nav className="hidden lg:flex items-center gap-0.5 absolute left-1/2 -translate-x-1/2 z-10" aria-label="Main navigation">
+        <nav className="hidden lg:flex items-center absolute left-1/2 -translate-x-1/2 z-10
+                        bg-gray-100 border border-gray-200/80 rounded-full px-2 py-1.5 gap-0.5"
+          aria-label="Main navigation">
 
           {/* Solutions trigger */}
           <button type="button"
             onMouseEnter={() => menuEnter('solutions')}
             onMouseLeave={menuLeave}
-            className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold rounded-lg transition-colors ${openMenu === 'solutions' ? 'text-brand-red' : 'text-gray-700 hover:text-brand-red'}`}>
+            className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-full transition-colors whitespace-nowrap ${openMenu === 'solutions' ? 'bg-white text-brand-red shadow-sm' : 'text-gray-700 hover:bg-white hover:text-brand-red hover:shadow-sm'}`}>
             {t('solutions')}
             <ChevronDown open={openMenu === 'solutions'} />
           </button>
@@ -129,7 +126,7 @@ export function Header() {
           <button type="button"
             onMouseEnter={() => menuEnter('technology')}
             onMouseLeave={menuLeave}
-            className={`flex items-center gap-1.5 px-4 py-2.5 text-sm font-semibold rounded-lg transition-colors ${openMenu === 'technology' ? 'text-brand-red' : 'text-gray-700 hover:text-brand-red'}`}>
+            className={`flex items-center gap-1 px-4 py-2 text-sm font-semibold rounded-full transition-colors whitespace-nowrap ${openMenu === 'technology' ? 'bg-white text-brand-red shadow-sm' : 'text-gray-700 hover:bg-white hover:text-brand-red hover:shadow-sm'}`}>
             {t('technology')}
             <ChevronDown open={openMenu === 'technology'} />
           </button>
@@ -141,27 +138,19 @@ export function Header() {
             { href: '/blog',         label: t('blog') },
           ].map(({ href, label }) => (
             <Link key={href} href={href as never}
-              className="px-4 py-2.5 text-sm font-semibold text-gray-700 hover:text-brand-red rounded-lg transition-colors whitespace-nowrap">
+              className="px-4 py-2 text-sm font-semibold text-gray-700 hover:bg-white hover:text-brand-red hover:shadow-sm rounded-full transition-all whitespace-nowrap">
               {label}
             </Link>
           ))}
         </nav>
 
         {/* ── Right side ── */}
-        <div className="hidden lg:flex items-center gap-3 flex-shrink-0">
-          <button type="button" onClick={toggleLocale}
-            className="flex items-center gap-1.5 px-2.5 py-2 text-xs font-semibold text-gray-500 hover:text-gray-800 rounded-lg hover:bg-gray-100 transition-all"
-            aria-label="Toggle language">
-            <span className="text-sm leading-none">{locale === 'id' ? '🇮🇩' : '🇬🇧'}</span>
-            <span className="uppercase">{locale}</span>
-          </button>
-
-          <Link href="#" className="text-sm font-semibold text-gray-600 hover:text-brand-red transition-colors">
-            {t('login')}
+        <div className="hidden lg:flex items-center gap-3 flex-shrink-0 ml-auto">
+          <Link href="/login" className="text-sm font-semibold text-gray-600 hover:text-brand-red transition-colors whitespace-nowrap">
+            Login
           </Link>
-
-          <Button href="/contact" size="sm" className="px-5">
-            {t('ctaDaftar')} →
+          <Button href="/contact" size="sm" className="px-5 whitespace-nowrap">
+            Daftar Sekarang →
           </Button>
         </div>
 
