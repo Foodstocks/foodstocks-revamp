@@ -50,7 +50,7 @@ export default function HomePage() {
       <DualPath />
 
       {/* ── CORE TECHNOLOGY ─────────────────────────────────── */}
-      <section className="py-24 bg-gray-50 bg-dot-grid">
+      <section className="py-24 bg-[#FFF5F5] bg-dot-grid">
         <div className="max-w-[82rem] mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-10 items-end mb-14">
             <div className="lg:col-span-2">
@@ -237,7 +237,7 @@ export default function HomePage() {
       </section>
 
       {/* ── FEATURED CASE STUDY ─────────────────────────────── */}
-      <section className="py-24 bg-gray-50">
+      <section className="py-24 bg-[#FFF0F0]">
         <div className="max-w-[82rem] mx-auto px-6">
           <Reveal className="grid lg:grid-cols-2 gap-12 items-center bg-brand-ink text-white rounded-3xl p-10 lg:p-16 relative overflow-hidden">
             {/* Background decoration */}

@@ -5,18 +5,19 @@
    Source-of-truth, dipakai di seluruh app via Tailwind utilities.
 ============================================================ */
 @theme {
-  /* Brand red scale (primary anchor) */
-  --color-brand-red-50: #FEF2F2;
-  --color-brand-red-100: #FEE2E2;
-  --color-brand-red-200: #FECACA;
-  --color-brand-red-300: #FCA5A5;
-  --color-brand-red-400: #F87171;
-  --color-brand-red-500: #EF4444;
-  --color-brand-red-600: #E30613;
-  --color-brand-red-700: #B91C1C;
-  --color-brand-red-800: #991B1B;
-  --color-brand-red-900: #7F1D1D;
-  --color-brand-red: #E30613;
+  /* Brand red scale (primary anchor) — official palette */
+  --color-brand-red-50: #FFF0F0;
+  --color-brand-red-100: #FFD5D5;
+  --color-brand-red-200: #FFABAB;
+  --color-brand-red-300: #FF8080;
+  --color-brand-red-400: #FF5050;
+  --color-brand-red-500: #FF0101;
+  --color-brand-red-600: #D60001;
+  --color-brand-red-700: #B40001;
+  --color-brand-red-800: #8B0001;
+  --color-brand-red-900: #5C0000;
+  --color-brand-red: #D60001;
+  --color-brand-red-vivid: #FF0101;
 
   /* Brand orange (optional accent, reserved) */
   --color-brand-orange: #FF6B1A;
@@ -41,7 +42,7 @@
   /* Shadows */
   --shadow-soft: 0 4px 20px -4px rgb(15 23 42 / 0.08);
   --shadow-card: 0 8px 30px -8px rgb(15 23 42 / 0.12);
-  --shadow-lift: 0 20px 60px -20px rgb(227 6 19 / 0.25);
+  --shadow-lift: 0 20px 60px -20px rgb(214 0 1 / 0.28);
 
   /* Max width container — 82rem = 1312px (standard SaaS width) */
   --container-8xl: 82rem;
@@ -149,9 +150,15 @@ body {
   background-size: 28px 28px;
 }
 
+/* Dot grid — white variant for dark/colored backgrounds */
+.bg-dot-grid-white {
+  background-image: radial-gradient(circle, rgb(255 255 255 / 0.08) 1px, transparent 1px);
+  background-size: 28px 28px;
+}
+
 /* Gradient text (red → orange) */
 .text-gradient-red {
-  background: linear-gradient(135deg, #E30613 0%, #FF6B1A 100%);
+  background: linear-gradient(135deg, #D60001 0%, #FF6B1A 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-clip: text;
@@ -159,7 +166,7 @@ body {
 
 /* Hero glow blob behind mockup */
 .glow-blob-red {
-  background: radial-gradient(ellipse at 50% 50%, rgba(227, 6, 19, 0.10) 0%, transparent 68%);
+  background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.18) 0%, transparent 68%);
 }
 
 /* Stat number (display variant) */
@@ -183,7 +190,7 @@ body {
   position: absolute;
   inset: 0;
   border-radius: 9999px;
-  background: rgba(227, 6, 19, 0.45);
+  background: rgba(214, 0, 1, 0.45);
   animation: pulse-ring 2.2s ease-out infinite;
   pointer-events: none;
 }
@@ -201,8 +208,8 @@ body {
 
 /* Eyebrow on dark surface */
 .eyebrow-dark {
-  background: rgba(227, 6, 19, 0.18);
-  color: #FCA5A5;
+  background: rgba(214, 0, 1, 0.20);
+  color: #FF9999;
 }
 
 /* Feature check icon wrapper */
@@ -235,33 +242,12 @@ body {
   border-radius: 4px;
 }
 
-/* Hero branded background */
+/* Hero branded background — bold red gradient */
 .hero-bg {
-  background-color: #FFFFFF;
-  background-image:
-    radial-gradient(ellipse 70% 60% at 100% 0%, rgba(254, 242, 242, 0.9) 0%, transparent 60%),
-    radial-gradient(ellipse 50% 50% at 0% 100%, rgba(255, 245, 235, 0.7) 0%, transparent 55%);
+  background: linear-gradient(135deg, #7A0001 0%, #B40001 22%, #D60001 45%, #E84040 68%, #FF7575 88%, #FFE0E0 100%);
 }
 
-/* Mega-menu transition */
-.mega-menu {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(10px);
-  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
-  pointer-events: none;
-}
-.nav-item:hover .mega-menu,
-.nav-item:focus-within .mega-menu {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-/* Chevron rotation on nav-item hover */
-.nav-chevron {
-  transition: transform 0.2s ease;
-}
-.nav-item:hover .nav-chevron {
-  transform: rotate(180deg);
+/* Mega-menu — base transition (visibility toggled via JS state in header.tsx) */
+.mega-menu-base {
+  transition: opacity 0.18s ease, transform 0.18s ease;
 }

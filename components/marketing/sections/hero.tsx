@@ -10,9 +10,9 @@ export function Hero() {
     <section className="relative overflow-hidden hero-bg">
       {/* Background blobs */}
       <div className="absolute inset-0 pointer-events-none select-none" aria-hidden>
-        <div className="absolute -top-40 -right-40 w-[700px] h-[600px] rounded-full bg-gradient-to-bl from-brand-red-50 via-brand-red-50/20 to-transparent" />
-        <div className="absolute bottom-0 -left-20 w-[400px] h-[400px] rounded-full bg-gradient-to-tr from-brand-cream/80 to-transparent" />
-        <div className="bg-dot-grid absolute inset-0 opacity-40" />
+        <div className="absolute -top-32 -right-24 w-[700px] h-[600px] rounded-full bg-white/8 blur-3xl" />
+        <div className="absolute bottom-0 -left-20 w-[500px] h-[400px] rounded-full bg-black/20 blur-3xl" />
+        <div className="bg-dot-grid-white absolute inset-0 opacity-70" />
       </div>
 
       <div className="relative max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-28 lg:pb-32 grid lg:grid-cols-12 gap-12 lg:gap-16 items-center">
@@ -21,7 +21,7 @@ export function Hero() {
         <Reveal className="lg:col-span-6">
 
           {/* Social proof pill */}
-          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white border border-gray-200 shadow-[0_2px_8px_-2px_rgba(15,23,42,0.08)] mb-7">
+          <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-white/95 border border-white/40 shadow-[0_4px_16px_-4px_rgba(0,0,0,0.20)] mb-7">
             <div className="flex items-center -space-x-1">
               {['bg-orange-400','bg-amber-400','bg-red-400','bg-pink-400'].map((c, i) => (
                 <span key={i} className={`w-5 h-5 rounded-full border-2 border-white ${c}`} aria-hidden />
@@ -41,13 +41,13 @@ export function Hero() {
             </div>
           </div>
 
-          <h1 className="heading-brand text-[clamp(2.75rem,5.5vw+1rem,5.5rem)] leading-[1.02]">
+          <h1 className="heading-brand text-[clamp(2.75rem,5.5vw+1rem,5.5rem)] leading-[1.02] text-white">
             {t('titleBefore')}{' '}
-            <span className="text-gradient-red">{t('titleHighlight')}</span>,<br />
+            <span className="text-yellow-300 drop-shadow-sm">{t('titleHighlight')}</span>,<br />
             {t('titleAfter')}
           </h1>
 
-          <p className="mt-6 text-lg text-gray-500 max-w-lg leading-relaxed">
+          <p className="mt-6 text-lg text-white/75 max-w-lg leading-relaxed">
             {t('description')}
           </p>
 
@@ -58,8 +58,8 @@ export function Hero() {
               { icon: 'M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75z', label: 'AI Order Capture' },
               { icon: 'M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9', label: 'AR Product 3D' },
             ].map((b) => (
-              <div key={b.label} className="flex items-center gap-1.5 bg-white border border-gray-100 rounded-full px-3 py-1.5 text-xs font-medium text-gray-600">
-                <svg className="w-3.5 h-3.5 text-brand-red flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
+              <div key={b.label} className="flex items-center gap-1.5 bg-white/15 border border-white/25 rounded-full px-3 py-1.5 text-xs font-medium text-white/90">
+                <svg className="w-3.5 h-3.5 text-yellow-300 flex-shrink-0" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" aria-hidden>
                   <path strokeLinecap="round" strokeLinejoin="round" d={b.icon} />
                 </svg>
                 {b.label}
@@ -68,17 +68,19 @@ export function Hero() {
           </div>
 
           <div className="mt-8 flex flex-wrap gap-3">
-            <Button href="/contact" size="lg">
+            <Button href="/contact" size="lg" className="bg-white text-brand-red hover:bg-white/90 shadow-lg font-bold">
               {t('ctaPrimary')}
               <svg className="w-4 h-4" viewBox="0 0 20 20" fill="currentColor" aria-hidden>
                 <path fillRule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clipRule="evenodd" />
               </svg>
             </Button>
-            <Button href="/solutions/supplier" size="lg" variant="secondary">{t('ctaSecondary')}</Button>
+            <Button href="/solutions/supplier" size="lg" className="bg-white/15 text-white border border-white/30 hover:bg-white/25 font-semibold">
+              {t('ctaSecondary')}
+            </Button>
           </div>
 
           {/* Stats row */}
-          <div className="mt-12 pt-8 border-t border-gray-200/60 grid grid-cols-4 gap-0 max-w-lg">
+          <div className="mt-12 pt-8 border-t border-white/20 grid grid-cols-4 gap-0 max-w-lg">
             {[
               { to: 923, suffix: '+', label: t('statSku') },
               { to: 500, suffix: '+', label: t('statMitra') },
@@ -86,11 +88,11 @@ export function Hero() {
               { to: 99,  suffix: '%', label: t('statReliability') },
             ].map((s, i) => (
               <div key={i} className="relative pl-4 first:pl-0">
-                {i > 0 && <div className="absolute left-0 top-1/4 h-8 w-px bg-gray-200" aria-hidden />}
-                <p className="stat-number text-3xl lg:text-4xl text-brand-red">
+                {i > 0 && <div className="absolute left-0 top-1/4 h-8 w-px bg-white/25" aria-hidden />}
+                <p className="stat-number text-3xl lg:text-4xl text-white">
                   <StatCounter to={s.to} suffix={s.suffix} />
                 </p>
-                <p className="text-[10px] text-gray-400 mt-1.5 uppercase tracking-wider leading-tight">{s.label}</p>
+                <p className="text-[10px] text-white/60 mt-1.5 uppercase tracking-wider leading-tight">{s.label}</p>
               </div>
             ))}
           </div>
@@ -98,7 +100,7 @@ export function Hero() {
 
         {/* ── Right column — dashboard mockup ── */}
         <Reveal className="lg:col-span-6 relative">
-          <div className="absolute inset-4 -z-10 glow-blob-red scale-110" aria-hidden />
+          <div className="absolute inset-4 -z-10 rounded-full bg-white/20 blur-3xl scale-125" aria-hidden />
 
           <div className="relative rounded-3xl overflow-hidden bg-white border border-gray-200/80 shadow-[0_24px_64px_-16px_rgba(15,23,42,0.16)]">
             {/* Browser chrome */}
