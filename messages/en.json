@@ -7,10 +7,10 @@
     "solutions": "Solutions",
     "technology": "Technology",
     "caseStudies": "Case Studies",
-    "pricing": "Pricing",
+    "about": "About",
+    "contact": "Contact",
     "blog": "Blog",
-    "login": "Login",
-    "requestDemo": "Request Demo"
+    "login": "Login"
   },
   "megaMenu": {
     "forSuppliers": "For Suppliers",
@@ -21,6 +21,8 @@
     "supplierPortalDesc": "Real-time analytics dashboard",
     "qualityWarehousing": "Quality Warehousing",
     "qualityWarehousingDesc": "Cold storage · food-grade",
+    "kolAffiliator": "KOL & Affiliator",
+    "kolAffiliatorDesc": "Grow reach via creators & affiliates",
     "wholesale": "Wholesale",
     "wholesaleDesc": "Bulk order best price",
     "consignment": "Consignment",
@@ -33,7 +35,18 @@
     "orderAgentCta": "See demo →",
     "orderAgentShort": "AI order capture",
     "arShort": "3D, recipes, nutrition",
-    "new": "NEW"
+    "new": "NEW",
+    "techForRetail": "For Retail",
+    "techForReseller": "For Reseller",
+    "techForSupplier": "For Supplier",
+    "retailCatalog": "Smart Catalog",
+    "retailCatalogDesc": "Browse 923+ SKUs with AR preview",
+    "smartWms": "Smart WMS",
+    "smartWmsDesc": "Real-time inventory & auto-reorder",
+    "techFeaturedBadge": "First in Indonesia",
+    "techFeaturedTitle": "AR Product Experience",
+    "techFeaturedDesc": "Scan packaging → 3D model, recipes, nutrition, and how-to videos.",
+    "techFeaturedCta": "Try AR demo →"
   },
   "mobileMenu": {
     "forSuppliers": "For Suppliers",

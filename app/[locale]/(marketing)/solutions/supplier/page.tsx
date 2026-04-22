@@ -30,6 +30,29 @@ const benefits = [
   },
 ];
 
+const kolPerks = [
+  {
+    icon: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z',
+    title: 'Jangkauan Audiens Luas',
+    desc: 'Konten Anda menjangkau jutaan follower. Kami sediakan materi produk, sample, dan brief kreatif.',
+  },
+  {
+    icon: 'M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z',
+    title: 'Komisi Kompetitif',
+    desc: 'Komisi per konversi + bonus performa. Semakin banyak terjual, semakin tinggi komisi Anda.',
+  },
+  {
+    icon: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z',
+    title: 'Dashboard Afiliasi Real-time',
+    desc: 'Lacak klik, konversi, dan pendapatan Anda kapan saja melalui dashboard afiliasi personal.',
+  },
+  {
+    icon: 'M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z',
+    title: 'Support Konten AI',
+    desc: 'Template konten, caption generator, dan insight tren dari AI Foodstocks untuk tingkatkan engagement.',
+  },
+];
+
 const steps = [
   { n: 1, title: 'Registrasi & dokumen', desc: 'Upload NIB, BPOM, Halal MUI. Tim kami verifikasi.' },
   { n: 2, title: 'Upload produk', desc: 'SKU, foto, harga wholesale. Tim kami bantu optimize listing.' },
@@ -100,12 +123,22 @@ export default function SupplierPage() {
                     <span className="text-[10px] text-gray-400">Mar 2026</span>
                   </div>
                   <div className="h-20 flex items-end gap-1">
-                    {[[60, 55], [70, 72], [80, 90], [85, 82]].map(([f, r], i) => (
-                      <div key={i} className="flex-1 flex flex-col gap-0.5 h-full justify-end">
-                        <div className="bg-gray-200 rounded-t" style={{ height: `${f}%` }} />
-                        <div className="bg-brand-red rounded-t" style={{ height: `${r}%` }} />
-                      </div>
-                    ))}
+                    <div className="flex-1 flex flex-col gap-0.5 h-full justify-end">
+                      <div className="bg-gray-200 rounded-t h-[60%]" />
+                      <div className="bg-brand-red rounded-t h-[55%]" />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-0.5 h-full justify-end">
+                      <div className="bg-gray-200 rounded-t h-[70%]" />
+                      <div className="bg-brand-red rounded-t h-[72%]" />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-0.5 h-full justify-end">
+                      <div className="bg-gray-200 rounded-t h-[80%]" />
+                      <div className="bg-brand-red rounded-t h-[90%]" />
+                    </div>
+                    <div className="flex-1 flex flex-col gap-0.5 h-full justify-end">
+                      <div className="bg-gray-200 rounded-t h-[85%]" />
+                      <div className="bg-brand-red rounded-t h-[82%]" />
+                    </div>
                   </div>
                   <div className="flex items-center gap-3 mt-2 text-[9px] text-gray-500">
                     <span className="flex items-center gap-1"><span className="w-2 h-2 rounded-sm bg-gray-200" />Forecast</span>
@@ -191,6 +224,55 @@ export default function SupplierPage() {
               </div>
             </div>
           </Reveal>
+        </div>
+      </section>
+
+      {/* KOL & AFFILIATOR */}
+      <section id="kol" className="py-24 bg-white">
+        <div className="max-w-[88rem] mx-auto px-6">
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <Reveal>
+              <span className="eyebrow">KOL &amp; Affiliator</span>
+              <h2 className="heading-brand mt-4 text-4xl md:text-5xl">
+                Perluas jangkauan via
+                <span className="text-brand-red"> kreator &amp; afiliasi.</span>
+              </h2>
+              <p className="mt-6 text-gray-500 leading-relaxed">
+                Program KOL &amp; Affiliator Foodstocks memungkinkan kreator konten, food blogger,
+                dan micro-influencer untuk mempromosikan produk snack Indonesia dan menghasilkan
+                komisi dari setiap transaksi.
+              </p>
+              <p className="mt-4 text-gray-500 leading-relaxed">
+                Kami menyediakan link afiliasi personal, materi konten, sample produk, dan dashboard
+                real-time untuk tracking performa kampanye Anda.
+              </p>
+              <div className="mt-8 flex flex-wrap gap-3">
+                <Button href="/contact?topic=Partnership+%2F+KOL" size="lg">Daftar sebagai KOL →</Button>
+                <Button href="/contact" size="lg" variant="secondary">Pelajari Program</Button>
+              </div>
+              <div className="mt-10 grid grid-cols-3 gap-4 border-t border-gray-100 pt-6">
+                <div><p className="heading-brand text-2xl text-brand-red">10%</p><p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">Komisi awal</p></div>
+                <div><p className="heading-brand text-2xl text-brand-red">200+</p><p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">Kreator aktif</p></div>
+                <div><p className="heading-brand text-2xl text-brand-red">7hr</p><p className="text-xs text-gray-500 mt-1 uppercase tracking-wider">Pencairan mingguan</p></div>
+              </div>
+            </Reveal>
+
+            <Reveal>
+              <div className="grid grid-cols-2 gap-4">
+                {kolPerks.map((k) => (
+                  <article key={k.title} className="bg-gray-50 rounded-2xl border border-gray-100 p-5 hover:border-brand-red-200 hover:bg-white hover:shadow-[0_4px_20px_-4px_rgba(227,6,19,0.08)] transition-all">
+                    <div className="w-10 h-10 rounded-xl bg-brand-red-50 flex items-center justify-center mb-4">
+                      <svg className="w-5 h-5 text-brand-red" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                        <path strokeLinecap="round" strokeLinejoin="round" d={k.icon} />
+                      </svg>
+                    </div>
+                    <h3 className="font-[family-name:var(--font-display)] font-bold text-base">{k.title}</h3>
+                    <p className="mt-1.5 text-sm text-gray-500 leading-relaxed">{k.desc}</p>
+                  </article>
+                ))}
+              </div>
+            </Reveal>
+          </div>
         </div>
       </section>
 

@@ -1,83 +1,29 @@
-import { PricingTabs } from '@/components/marketing/sections/pricing-tabs';
-import { FAQ } from '@/components/marketing/sections/faq';
+import { Button } from '@/components/ui/button';
 
 export const metadata = {
-  title: 'Pricing · Paket Fleksibel untuk Supplier & Reseller',
-  description: 'Harga transparan. Starter gratis selamanya. Growth & Enterprise untuk skala yang lebih besar.',
+  title: 'Pricing · Foodstocks',
+  description: 'Informasi paket dan harga Foodstocks segera hadir.',
 };
-
-const compareFeatures: [string, string, string, string][] = [
-  ['Katalog SKU', '923+', '923+', '923+'],
-  ['Wholesale & Consignment', '✓', '✓', '✓'],
-  ['Dropship module', '—', '✓', '✓'],
-  ['FS OrderAgent AI', '—', '500/bln', 'Unlimited'],
-  ['Reward multiplier', '1×', '2×', '3×'],
-  ['Multi-branch', '—', '—', '✓'],
-  ['ERP/POS integration', '—', '—', '✓'],
-  ['Support', 'Email', 'WhatsApp', 'Dedicated AM'],
-];
 
 export default function PricingPage() {
   return (
-    <>
-      {/* HERO */}
-      <section className="py-20 text-center">
-        <div className="max-w-3xl mx-auto px-6">
-          <span className="eyebrow">Pricing</span>
-          <h1 className="heading-brand mt-6 text-[clamp(2.5rem,5vw+1rem,4.75rem)]">
-            Harga transparan,
-            <br />
-            tumbuh <span className="text-brand-red">sesuai kebutuhan</span>.
-          </h1>
-          <p className="mt-6 text-lg text-gray-600">
-            Gratis untuk mulai. Upgrade kapan saja. Tanpa kontrak jangka panjang.
-          </p>
+    <section className="min-h-[70vh] flex items-center justify-center bg-gray-50">
+      <div className="text-center max-w-lg mx-auto px-6 py-24">
+        <div className="w-16 h-16 rounded-2xl bg-brand-red-50 flex items-center justify-center mx-auto mb-6">
+          <svg className="w-8 h-8 text-brand-red" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" aria-hidden>
+            <path strokeLinecap="round" strokeLinejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09z" />
+          </svg>
         </div>
-      </section>
-
-      {/* TIERS */}
-      <section className="pb-24">
-        <div className="max-w-[88rem] mx-auto px-6 flex flex-col items-center">
-          <PricingTabs />
+        <h1 className="heading-brand text-4xl">Segera Hadir</h1>
+        <p className="mt-4 text-gray-500 leading-relaxed">
+          Halaman pricing sedang dalam penyesuaian. Untuk informasi paket dan harga,
+          silakan hubungi tim kami langsung.
+        </p>
+        <div className="mt-8 flex flex-wrap gap-3 justify-center">
+          <Button href="/contact">Hubungi Kami →</Button>
+          <Button href="/" variant="secondary">Kembali ke Beranda</Button>
         </div>
-      </section>
-
-      {/* COMPARISON TABLE (reseller only as example) */}
-      <section className="py-20 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-5xl mx-auto px-6">
-          <div className="text-center mb-10">
-            <span className="eyebrow">Bandingkan</span>
-            <h2 className="heading-brand mt-4 text-3xl md:text-4xl">Feature breakdown (Reseller)</h2>
-          </div>
-          <div className="bg-white rounded-3xl border border-gray-100 overflow-hidden overflow-x-auto">
-            <table className="w-full text-sm">
-              <thead className="bg-gray-50">
-                <tr className="text-left">
-                  <th className="p-4 font-semibold">Feature</th>
-                  <th className="p-4 font-semibold text-center">Starter</th>
-                  <th className="p-4 font-semibold text-center text-brand-red">Growth</th>
-                  <th className="p-4 font-semibold text-center">Enterprise</th>
-                </tr>
-              </thead>
-              <tbody className="divide-y divide-gray-100">
-                {compareFeatures.map((row) => (
-                  <tr key={row[0]}>
-                    <td className="p-4">{row[0]}</td>
-                    {row.slice(1).map((cell, i) => (
-                      <td key={i} className={`p-4 text-center ${cell === '—' ? 'text-gray-300' : cell === '✓' ? 'text-brand-red' : ''}`}>
-                        {cell}
-                      </td>
-                    ))}
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
-
-      {/* FAQ */}
-      <FAQ />
-    </>
+      </div>
+    </section>
   );
 }
