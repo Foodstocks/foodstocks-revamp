@@ -6,26 +6,28 @@ import { useTranslations } from 'next-intl';
 import { Link } from '@/i18n/navigation';
 import { Button } from '@/components/ui/button';
 
-/* ── small icon (no colored bg chip — Ukirama style) ── */
-function ItemIcon({ path }: { path: string }) {
+/* ── colored icon chip ── */
+function ItemIcon({ path, bg = 'bg-gray-100', color = 'text-gray-500' }: {
+  path: string; bg?: string; color?: string;
+}) {
   return (
-    <span className="w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 bg-gray-100 group-hover:bg-brand-red/10 transition-colors mt-0.5">
-      <svg className="w-4 h-4 text-gray-500 group-hover:text-brand-red transition-colors" fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" aria-hidden="true">
+    <span className={`w-8 h-8 rounded-lg flex items-center justify-center flex-shrink-0 ${bg} mt-0.5 transition-all`}>
+      <svg className={`w-4 h-4 ${color}`} fill="none" stroke="currentColor" strokeWidth="1.75" viewBox="0 0 24 24" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d={path} />
       </svg>
     </span>
   );
 }
 
-/* ── grid item card (Ukirama-style: icon + title + desc) ── */
-function ItemCard({ href, title, desc, path, badge, onClick }: {
+/* ── grid item card ── */
+function ItemCard({ href, title, desc, path, badge, bg, color, onClick }: {
   href: string; title: string; desc: string; path: string;
-  badge?: string; onClick?: () => void;
+  badge?: string; bg?: string; color?: string; onClick?: () => void;
 }) {
   return (
     <Link href={href as never} onClick={onClick}
       className="group flex items-start gap-3 p-3 rounded-xl hover:bg-gray-50 transition-all">
-      <ItemIcon path={path} />
+      <ItemIcon path={path} bg={bg} color={color} />
       <div className="min-w-0">
         <p className="text-sm font-semibold text-gray-900 group-hover:text-brand-red transition-colors flex items-center gap-1.5">
           {title}
@@ -54,26 +56,26 @@ const ChevronDown = ({ open }: { open: boolean }) => (
 
 /* ── nav data ── */
 const supplierItems = [
-  { href: '/solutions/distribution-network', title: 'Jaringan Distribusi', desc: '30+ kota, logistik terintegrasi',   path: 'M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z' },
-  { href: '/solutions/supplier',              title: 'Supplier Portal',     desc: 'Analytics & dashboard real-time',  path: 'M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25' },
-  { href: '/solutions/quality-warehousing',   title: 'Gudang Berkualitas',  desc: 'Cold storage · food-grade',        path: 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21' },
-  { href: '/solutions/supplier#kol',          title: 'KOL & Affiliator',    desc: 'Perluas jangkauan via kreator',    path: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z' },
+  { href: '/solutions/distribution-network', title: 'Jaringan Distribusi', desc: '30+ kota, logistik terintegrasi',   bg: 'bg-red-50',     color: 'text-brand-red',    path: 'M9 6.75V15m6-6v8.25m.503 3.498l4.875-2.437c.381-.19.622-.58.622-1.006V4.82c0-.836-.88-1.38-1.628-1.006l-3.869 1.934c-.317.159-.69.159-1.006 0L9.503 3.252a1.125 1.125 0 00-1.006 0L3.622 5.689C3.24 5.88 3 6.27 3 6.695V19.18c0 .836.88 1.38 1.628 1.006l3.869-1.934c.317-.159.69-.159 1.006 0l4.994 2.497c.317.158.69.158 1.006 0z' },
+  { href: '/solutions/supplier',              title: 'Supplier Portal',     desc: 'Analytics & dashboard real-time',  bg: 'bg-orange-50',  color: 'text-orange-500',   path: 'M9 17.25v1.007a3 3 0 01-.879 2.122L7.5 21h9l-.621-.621A3 3 0 0115 18.257V17.25m6-12V15a2.25 2.25 0 01-2.25 2.25H5.25A2.25 2.25 0 013 15V5.25' },
+  { href: '/solutions/quality-warehousing',   title: 'Gudang Berkualitas',  desc: 'Cold storage · food-grade',        bg: 'bg-emerald-50', color: 'text-emerald-600',  path: 'M3.75 21h16.5M4.5 3h15M5.25 3v18m13.5-18v18M9 6.75h1.5m-1.5 3h1.5m-1.5 3h1.5m3-6H15m-1.5 3H15m-1.5 3H15M9 21v-3.375c0-.621.504-1.125 1.125-1.125h3.75c.621 0 1.125.504 1.125 1.125V21' },
+  { href: '/solutions/supplier#kol',          title: 'KOL & Affiliator',    desc: 'Perluas jangkauan via kreator',    bg: 'bg-pink-50',    color: 'text-pink-500',     path: 'M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z' },
 ];
 
 const resellerItems = [
-  { href: '/solutions/wholesale',   title: 'Wholesale',  desc: 'Beli putus harga terbaik',       path: 'M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z' },
-  { href: '/solutions/consignment', title: 'Konsinyasi', desc: 'Zero upfront · bayar saat laku', path: 'M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
-  { href: '/solutions/dropship',    title: 'Dropship',   desc: 'Tanpa stok · custom branding',   path: 'M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12' },
+  { href: '/solutions/wholesale',   title: 'Wholesale',  desc: 'Beli putus harga terbaik',       bg: 'bg-blue-50',   color: 'text-blue-600',   path: 'M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5m8.25 3v6.75m0 0l-3-3m3 3l3-3M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z' },
+  { href: '/solutions/consignment', title: 'Konsinyasi', desc: 'Zero upfront · bayar saat laku', bg: 'bg-amber-50',  color: 'text-amber-500',  path: 'M12 6v12m-3-2.818l.879.659c1.171.879 3.07.879 4.242 0 1.172-.879 1.172-2.303 0-3.182C13.536 12.219 12.768 12 12 12c-.725 0-1.45-.22-2.003-.659-1.106-.879-1.106-2.303 0-3.182s2.9-.879 4.006 0l.415.33M21 12a9 9 0 11-18 0 9 9 0 0118 0z' },
+  { href: '/solutions/dropship',    title: 'Dropship',   desc: 'Tanpa stok · custom branding',   bg: 'bg-violet-50', color: 'text-violet-600', path: 'M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12' },
 ];
 
 const techRetailItems = [
-  { href: '/technology/ar', title: 'AR Product Viz', desc: '3D, resep, nutrisi',        path: 'M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9' },
-  { href: '#',              title: 'Smart Catalog',  desc: 'Browse 923+ SKU dengan AR', path: 'M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272' },
+  { href: '/technology/ar', title: 'AR Product Viz', desc: '3D, resep, nutrisi',        bg: 'bg-purple-50', color: 'text-purple-600', path: 'M21 7.5l-9-5.25L3 7.5m18 0l-9 5.25m9-5.25v9l-9 5.25M3 7.5l9 5.25M3 7.5v9l9 5.25m0-9v9' },
+  { href: '#',              title: 'Smart Catalog',  desc: 'Browse 923+ SKU dengan AR', bg: 'bg-sky-50',    color: 'text-sky-600',    path: 'M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272' },
 ];
 
 const techOpsItems = [
-  { href: '/technology/order-agent', title: 'FS OrderAgent', desc: 'AI order capture',          path: 'M13 10V3L4 14h7v7l9-11h-7z', badge: 'Baru' },
-  { href: '#',                        title: 'Smart WMS',     desc: 'Inventory & auto-reorder', path: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z' },
+  { href: '/technology/order-agent', title: 'FS OrderAgent', desc: 'AI order capture',          bg: 'bg-red-50',    color: 'text-brand-red',    path: 'M13 10V3L4 14h7v7l9-11h-7z', badge: 'Baru' },
+  { href: '#',                        title: 'Smart WMS',     desc: 'Inventory & auto-reorder', bg: 'bg-violet-50', color: 'text-violet-600',   path: 'M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z' },
 ];
 
 export function Header() {
@@ -177,8 +179,8 @@ export function Header() {
         {openMenu === 'solutions' && (
           <div className="max-w-[82rem] mx-auto px-6 flex min-h-[220px]">
             {/* Left sidebar */}
-            <div className="w-56 flex-shrink-0 py-5 pr-6 border-r border-gray-100 flex flex-col">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-4 mb-2">Solutions</p>
+            <div className="w-56 flex-shrink-0 py-5 px-3 bg-[#F7F8FA] rounded-xl mr-6 flex flex-col">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-1 mb-2">Solutions</p>
               {([
                 { key: 'supplier' as const, title: 'Untuk Supplier', desc: 'Distribusi & produksi' },
                 { key: 'reseller' as const, title: 'Untuk Reseller', desc: 'Jual lebih banyak' },
@@ -187,7 +189,7 @@ export function Header() {
                   className={`w-full text-left px-4 py-3 rounded-xl transition-all flex items-center justify-between mb-1 ${
                     solutionsTab === key
                       ? 'bg-white shadow-sm border border-gray-200'
-                      : 'hover:bg-gray-50'
+                      : 'hover:bg-white/60'
                   }`}>
                   <div>
                     <p className={`text-sm font-bold transition-colors ${solutionsTab === key ? 'text-brand-red' : 'text-gray-800'}`}>{title}</p>
@@ -196,22 +198,10 @@ export function Header() {
                   <ChevronRight />
                 </button>
               ))}
-              {/* Featured card — FS OrderAgent */}
-              <div className="mt-auto pt-3">
-                <div className="bg-gradient-to-br from-brand-ink to-slate-800 rounded-xl p-3">
-                  <p className="text-[9px] font-bold text-brand-red uppercase tracking-widest">Baru</p>
-                  <p className="text-xs font-bold text-white mt-1 leading-tight">FS OrderAgent</p>
-                  <p className="text-[10px] text-white/50 mt-1 leading-tight">AI order dari WA & email</p>
-                  <Link href="/technology/order-agent" onClick={() => setOpenMenu(null)}
-                    className="mt-2 flex items-center gap-1 text-brand-red text-[10px] font-bold hover:underline">
-                    Lihat demo →
-                  </Link>
-                </div>
-              </div>
             </div>
 
             {/* Right panel */}
-            <div className="flex-1 py-5 pl-8">
+            <div className="flex-1 py-5">
               {solutionsTab === 'supplier' && (
                 <>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Untuk Supplier</p>
@@ -219,6 +209,17 @@ export function Header() {
                     {supplierItems.map((item) => (
                       <ItemCard key={item.href} {...item} onClick={() => setOpenMenu(null)} />
                     ))}
+                  </div>
+                  <div className="mt-4 bg-gradient-to-r from-brand-ink to-slate-700 rounded-xl p-3.5 flex items-center justify-between">
+                    <div>
+                      <span className="text-[9px] font-bold text-brand-red uppercase tracking-widest">Baru</span>
+                      <p className="text-sm font-bold text-white mt-0.5">FS OrderAgent</p>
+                      <p className="text-xs text-white/50 mt-0.5">AI order capture dari WhatsApp & email</p>
+                    </div>
+                    <Link href="/technology/order-agent" onClick={() => setOpenMenu(null)}
+                      className="flex-shrink-0 ml-4 px-3 py-1.5 bg-brand-red text-white text-xs font-bold rounded-lg hover:bg-brand-red/90 transition-colors">
+                      Lihat demo →
+                    </Link>
                   </div>
                 </>
               )}
@@ -230,6 +231,17 @@ export function Header() {
                       <ItemCard key={item.href} {...item} onClick={() => setOpenMenu(null)} />
                     ))}
                   </div>
+                  <div className="mt-4 bg-gradient-to-r from-brand-ink to-slate-700 rounded-xl p-3.5 flex items-center justify-between">
+                    <div>
+                      <span className="text-[9px] font-bold text-brand-red uppercase tracking-widest">Baru</span>
+                      <p className="text-sm font-bold text-white mt-0.5">FS OrderAgent</p>
+                      <p className="text-xs text-white/50 mt-0.5">AI order capture dari WhatsApp & email</p>
+                    </div>
+                    <Link href="/technology/order-agent" onClick={() => setOpenMenu(null)}
+                      className="flex-shrink-0 ml-4 px-3 py-1.5 bg-brand-red text-white text-xs font-bold rounded-lg hover:bg-brand-red/90 transition-colors">
+                      Lihat demo →
+                    </Link>
+                  </div>
                 </>
               )}
             </div>
@@ -240,8 +252,8 @@ export function Header() {
         {openMenu === 'technology' && (
           <div className="max-w-[82rem] mx-auto px-6 flex min-h-[220px]">
             {/* Left sidebar */}
-            <div className="w-56 flex-shrink-0 py-5 pr-6 border-r border-gray-100 flex flex-col">
-              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-4 mb-2">Technology</p>
+            <div className="w-56 flex-shrink-0 py-5 px-3 bg-[#F7F8FA] rounded-xl mr-6 flex flex-col">
+              <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-1 mb-2">Technology</p>
               {([
                 { key: 'retail' as const, title: 'Retail & Catalog', desc: 'AR, 3D, smart browse' },
                 { key: 'ops'    as const, title: 'Operasional',       desc: 'AI order, WMS, analytics' },
@@ -250,7 +262,7 @@ export function Header() {
                   className={`w-full text-left px-4 py-3 rounded-xl transition-all flex items-center justify-between mb-1 ${
                     techTab === key
                       ? 'bg-white shadow-sm border border-gray-200'
-                      : 'hover:bg-gray-50'
+                      : 'hover:bg-white/60'
                   }`}>
                   <div>
                     <p className={`text-sm font-bold transition-colors ${techTab === key ? 'text-brand-red' : 'text-gray-800'}`}>{title}</p>
@@ -259,22 +271,10 @@ export function Header() {
                   <ChevronRight />
                 </button>
               ))}
-              {/* Featured card — AR */}
-              <div className="mt-auto pt-3">
-                <div className="bg-gradient-to-br from-slate-900 via-purple-950 to-brand-ink rounded-xl p-3">
-                  <p className="text-[9px] font-bold text-purple-300 uppercase tracking-widest">Pertama di Indonesia</p>
-                  <p className="text-xs font-bold text-white mt-1 leading-tight">AR Product Experience</p>
-                  <p className="text-[10px] text-white/50 mt-1 leading-tight">3D, resep, info nutrisi</p>
-                  <Link href="/technology/ar" onClick={() => setOpenMenu(null)}
-                    className="mt-2 flex items-center gap-1 text-purple-300 text-[10px] font-bold hover:underline">
-                    Coba demo AR →
-                  </Link>
-                </div>
-              </div>
             </div>
 
             {/* Right panel */}
-            <div className="flex-1 py-5 pl-8">
+            <div className="flex-1 py-5">
               {techTab === 'retail' && (
                 <>
                   <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 mb-3">Retail & Catalog</p>
@@ -282,6 +282,17 @@ export function Header() {
                     {techRetailItems.map((item) => (
                       <ItemCard key={item.href} {...item} onClick={() => setOpenMenu(null)} />
                     ))}
+                  </div>
+                  <div className="mt-4 bg-gradient-to-r from-slate-900 via-purple-950 to-brand-ink rounded-xl p-3.5 flex items-center justify-between">
+                    <div>
+                      <span className="text-[9px] font-bold text-purple-300 uppercase tracking-widest">Pertama di Indonesia</span>
+                      <p className="text-sm font-bold text-white mt-0.5">AR Product Experience</p>
+                      <p className="text-xs text-white/50 mt-0.5">Visualisasi 3D, resep, & info nutrisi</p>
+                    </div>
+                    <Link href="/technology/ar" onClick={() => setOpenMenu(null)}
+                      className="flex-shrink-0 ml-4 px-3 py-1.5 bg-purple-500 text-white text-xs font-bold rounded-lg hover:bg-purple-600 transition-colors">
+                      Coba demo AR →
+                    </Link>
                   </div>
                 </>
               )}
@@ -292,6 +303,17 @@ export function Header() {
                     {techOpsItems.map((item) => (
                       <ItemCard key={item.href} {...(item as Parameters<typeof ItemCard>[0])} onClick={() => setOpenMenu(null)} />
                     ))}
+                  </div>
+                  <div className="mt-4 bg-gradient-to-r from-slate-900 via-purple-950 to-brand-ink rounded-xl p-3.5 flex items-center justify-between">
+                    <div>
+                      <span className="text-[9px] font-bold text-purple-300 uppercase tracking-widest">Pertama di Indonesia</span>
+                      <p className="text-sm font-bold text-white mt-0.5">AR Product Experience</p>
+                      <p className="text-xs text-white/50 mt-0.5">Visualisasi 3D, resep, & info nutrisi</p>
+                    </div>
+                    <Link href="/technology/ar" onClick={() => setOpenMenu(null)}
+                      className="flex-shrink-0 ml-4 px-3 py-1.5 bg-purple-500 text-white text-xs font-bold rounded-lg hover:bg-purple-600 transition-colors">
+                      Coba demo AR →
+                    </Link>
                   </div>
                 </>
               )}
