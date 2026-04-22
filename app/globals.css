@@ -238,8 +238,8 @@ body {
 .mega-menu {
   opacity: 0;
   visibility: hidden;
-  transform: translateY(8px);
-  transition: all 0.25s ease;
+  transform: translateY(10px);
+  transition: opacity 0.22s ease, transform 0.22s ease, visibility 0.22s;
   pointer-events: none;
 }
 .nav-item:hover .mega-menu,
@@ -248,4 +248,11 @@ body {
   visibility: visible;
   transform: translateY(0);
   pointer-events: auto;
+}
+/* Chevron rotation on nav-item hover */
+.nav-chevron {
+  transition: transform 0.2s ease;
+}
+.nav-item:hover .nav-chevron {
+  transform: rotate(180deg);
 }
