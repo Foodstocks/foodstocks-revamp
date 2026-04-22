@@ -65,7 +65,7 @@ export default function SupplierPage() {
     <>
       {/* HERO */}
       <section className="relative bg-white">
-        <div className="max-w-[88rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">Untuk Supplier &amp; Produsen</span>
             <h1 className="heading-brand mt-6 text-[clamp(2.5rem,4.5vw+1rem,4.75rem)]">
@@ -164,7 +164,7 @@ export default function SupplierPage() {
 
       {/* KEY BENEFITS */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Benefit</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Semua yang Anda butuhkan untuk distribusi scale.</h2>
@@ -185,7 +185,7 @@ export default function SupplierPage() {
 
       {/* HOW IT WORKS */}
       <section id="demo" className="py-24">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="eyebrow">Proses</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Onboarding dalam 1×24 jam</h2>
@@ -229,7 +229,7 @@ export default function SupplierPage() {
 
       {/* KOL & AFFILIATOR */}
       <section id="kol" className="py-24 bg-white">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <Reveal>
               <span className="eyebrow">KOL &amp; Affiliator</span>

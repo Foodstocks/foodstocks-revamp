@@ -54,7 +54,7 @@ export default function AboutPage() {
         <div className="absolute inset-0 pointer-events-none" aria-hidden>
           <div className="absolute top-0 right-0 w-[500px] h-[400px] bg-gradient-to-bl from-brand-red-50/60 to-transparent" />
         </div>
-        <div className="relative max-w-[88rem] mx-auto px-6 pt-20 pb-24 text-center">
+        <div className="relative max-w-[82rem] mx-auto px-6 pt-20 pb-24 text-center">
           <Reveal>
             <span className="eyebrow">Tentang Foodstocks</span>
             <h1 className="heading-brand mt-6 text-[clamp(2.75rem,5vw+1rem,5rem)]">
@@ -87,7 +87,7 @@ export default function AboutPage() {
 
       {/* MISSION & VALUES */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="grid lg:grid-cols-2 gap-16 items-start">
             <div>
               <span className="eyebrow">Misi & Visi</span>
@@ -125,7 +125,7 @@ export default function AboutPage() {
 
       {/* JANGKAUAN — NASIONAL & INTERNASIONAL */}
       <section className="py-24 bg-white">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="eyebrow">Jangkauan</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">
@@ -160,7 +160,7 @@ export default function AboutPage() {
 
       {/* TIMELINE */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="text-center max-w-xl mx-auto mb-14">
             <span className="eyebrow">Perjalanan</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Milestone Foodstocks</h2>

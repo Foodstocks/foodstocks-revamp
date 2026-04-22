@@ -29,7 +29,7 @@ export default async function ProductDetailPage({ params }: Props) {
   return (
     <>
       {/* Breadcrumb */}
-      <div className="max-w-[88rem] mx-auto px-6 pt-6 text-xs text-gray-500">
+      <div className="max-w-[82rem] mx-auto px-6 pt-6 text-xs text-gray-500">
         <Link href="/shop" className="hover:text-brand-red">Shop</Link>
         <span className="mx-2">/</span>
         <a href="#" className="hover:text-brand-red">{product.category}</a>
@@ -40,7 +40,7 @@ export default async function ProductDetailPage({ params }: Props) {
       </div>
 
       {/* DETAIL */}
-      <section className="max-w-[88rem] mx-auto px-6 py-8 grid lg:grid-cols-12 gap-8">
+      <section className="max-w-[82rem] mx-auto px-6 py-8 grid lg:grid-cols-12 gap-8">
         {/* Gallery */}
         <div className="lg:col-span-7">
           <div className="grid grid-cols-6 gap-3">
@@ -157,7 +157,7 @@ export default async function ProductDetailPage({ params }: Props) {
       </section>
 
       {/* TABS */}
-      <section className="max-w-[88rem] mx-auto px-6 pb-12">
+      <section className="max-w-[82rem] mx-auto px-6 pb-12">
         <div className="bg-white rounded-3xl border border-gray-100 overflow-hidden">
           <div className="border-b border-gray-100 flex gap-6 px-6 overflow-x-auto">
             <button className="py-4 text-sm font-semibold border-b-2 border-brand-red text-brand-red whitespace-nowrap">Deskripsi</button>
@@ -196,7 +196,7 @@ export default async function ProductDetailPage({ params }: Props) {
 
       {/* RELATED */}
       {related.length > 0 && (
-        <section className="max-w-[88rem] mx-auto px-6 pb-16">
+        <section className="max-w-[82rem] mx-auto px-6 pb-16">
           <h2 className="heading-brand text-2xl md:text-3xl mb-6">Produk terkait</h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-3">
             {related.map((p) => (

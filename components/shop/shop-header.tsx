@@ -15,7 +15,7 @@ export function ShopHeader() {
     <header className="sticky top-0 z-50 bg-white border-b border-gray-100">
       {/* Top utility bar */}
       <div className="bg-gray-50 border-b border-gray-100">
-        <div className="max-w-[88rem] mx-auto px-6 py-1.5 flex items-center justify-between text-xs text-gray-500">
+        <div className="max-w-[82rem] mx-auto px-6 py-1.5 flex items-center justify-between text-xs text-gray-500">
           <Link href="/" className="hover:text-brand-red">← Kembali ke foodstocks.id</Link>
           <div className="flex gap-4">
             <a href="#" className="hover:text-brand-red">Lacak Pesanan</a>
@@ -25,7 +25,7 @@ export function ShopHeader() {
       </div>
 
       {/* Main nav */}
-      <nav className="max-w-[88rem] mx-auto px-6 py-3 flex items-center gap-6">
+      <nav className="max-w-[82rem] mx-auto px-6 py-3 flex items-center gap-6">
         <Link href="/shop" className="flex-shrink-0">
           <Image src="/logo.png" alt="Foodstocks Shop" width={110} height={36} className="h-9 w-auto" priority />
         </Link>
@@ -59,7 +59,7 @@ export function ShopHeader() {
 
       {/* Category pills (hidden on product detail / dashboard) */}
       {!compact && (
-        <div className="max-w-[88rem] mx-auto px-6 pb-3 flex gap-2 overflow-x-auto no-scrollbar">
+        <div className="max-w-[82rem] mx-auto px-6 pb-3 flex gap-2 overflow-x-auto no-scrollbar">
           {categories.map((c) => (
             <button
               key={c}

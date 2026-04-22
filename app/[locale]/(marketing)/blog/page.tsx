@@ -41,7 +41,7 @@ export default async function BlogPage() {
 
   return (
     <section className="py-20">
-      <div className="max-w-[88rem] mx-auto px-6">
+      <div className="max-w-[82rem] mx-auto px-6">
         <div className="max-w-2xl mb-14">
           <span className="eyebrow">Blog</span>
           <h1 className="heading-brand mt-4 text-4xl md:text-5xl">Insight industri snack.</h1>

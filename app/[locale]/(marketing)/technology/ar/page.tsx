@@ -35,7 +35,7 @@ export default function ARPage() {
     <>
       {/* HERO */}
       <section className="relative bg-white">
-        <div className="max-w-[88rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-6">
             <span className="eyebrow">Teknologi Eksklusif</span>
             <h1 className="heading-brand mt-6 text-[clamp(2.5rem,5vw+1rem,5rem)]">
@@ -103,7 +103,7 @@ export default function ARPage() {
 
       {/* CAPABILITIES */}
       <section id="capabilities" className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Fitur AR</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">4 experience dalam 1 scan.</h2>
@@ -124,7 +124,7 @@ export default function ARPage() {
 
       {/* BENEFITS SPLIT */}
       <section className="py-24">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Benefit</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Menang di kedua sisi.</h2>

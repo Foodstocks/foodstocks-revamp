@@ -25,7 +25,7 @@ export default function CaseStudyPage() {
   return (
     <>
       {/* Breadcrumb */}
-      <div className="max-w-[88rem] mx-auto px-6 pt-8 text-sm text-gray-500">
+      <div className="max-w-[82rem] mx-auto px-6 pt-8 text-sm text-gray-500">
         <Link href="/" className="hover:text-brand-red">Home</Link>
         <span className="mx-2">/</span>
         <Link href="/case-studies" className="hover:text-brand-red">Case Studies</Link>
@@ -164,7 +164,7 @@ export default function CaseStudyPage() {
 
       {/* RELATED CASES */}
       <section className="py-20 bg-gray-50 border-t border-gray-100">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <h2 className="heading-brand text-3xl md:text-4xl mb-10">Case study lainnya</h2>
           <div className="grid md:grid-cols-3 gap-4">
             {related.map((r) => (

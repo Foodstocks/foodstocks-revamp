@@ -20,7 +20,7 @@ export default function HomePage() {
 
       {/* ── TRUSTED BY marquee ──────────────────────────────── */}
       <section className="py-14 border-y border-gray-100 bg-white">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <p className="text-center text-[11px] text-gray-400 uppercase tracking-[0.15em] font-bold mb-8">
             Dipercaya oleh brand snack terkemuka Indonesia
           </p>
@@ -51,7 +51,7 @@ export default function HomePage() {
 
       {/* ── CORE TECHNOLOGY ─────────────────────────────────── */}
       <section className="py-24 bg-gray-50 bg-dot-grid">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="grid lg:grid-cols-3 gap-10 items-end mb-14">
             <div className="lg:col-span-2">
               <span className="eyebrow">Teknologi</span>
@@ -171,7 +171,7 @@ export default function HomePage() {
 
       {/* ── 3 BUSINESS MODELS ───────────────────────────────── */}
       <section className="py-24 bg-white">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto">
             <span className="eyebrow">Model kerjasama</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">3 cara untuk mulai</h2>
@@ -238,7 +238,7 @@ export default function HomePage() {
 
       {/* ── FEATURED CASE STUDY ─────────────────────────────── */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <Reveal className="grid lg:grid-cols-2 gap-12 items-center bg-brand-ink text-white rounded-3xl p-10 lg:p-16 relative overflow-hidden">
             {/* Background decoration */}
             <div className="absolute inset-0 pointer-events-none" aria-hidden>
@@ -274,7 +274,7 @@ export default function HomePage() {
 
       {/* ── CERTIFICATIONS ──────────────────────────────────── */}
       <section className="py-16 bg-white">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <p className="text-center text-[11px] text-gray-400 uppercase tracking-[0.15em] font-bold mb-10">
             Sertifikasi &amp; Jaminan Kualitas
           </p>

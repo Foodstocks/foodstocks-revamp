@@ -20,7 +20,7 @@ export default function ConsignmentPage() {
     <>
       {/* HERO */}
       <section className="bg-white">
-        <div className="max-w-[88rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">Business Model · Consignment</span>
             <h1 className="heading-brand mt-6 text-[clamp(2.5rem,4.5vw+1rem,4.75rem)]">
@@ -72,7 +72,7 @@ export default function ConsignmentPage() {
 
       {/* HOW IT WORKS */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="eyebrow">Proses</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">4 langkah, no surprises.</h2>

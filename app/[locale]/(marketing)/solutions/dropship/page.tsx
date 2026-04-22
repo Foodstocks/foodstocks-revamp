@@ -20,7 +20,7 @@ export default function DropshipPage() {
     <>
       {/* HERO */}
       <section className="bg-white">
-        <div className="max-w-[88rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">Business Model · Dropship</span>
             <h1 className="heading-brand mt-6 text-[clamp(2.5rem,4.5vw+1rem,4.75rem)]">
@@ -82,7 +82,7 @@ export default function DropshipPage() {
 
       {/* PERKS */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Benefit</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Kenapa dropship di Foodstocks.</h2>

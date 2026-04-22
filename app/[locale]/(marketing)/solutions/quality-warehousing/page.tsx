@@ -46,7 +46,7 @@ export default function QualityWarehousingPage() {
     <>
       {/* HERO */}
       <section className="bg-white">
-        <div className="max-w-[88rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-7">
             <span className="eyebrow">Untuk Supplier · Warehousing</span>
             <h1 className="heading-brand mt-6 text-[clamp(2.5rem,4.5vw+1rem,4.75rem)]">
@@ -118,7 +118,7 @@ export default function QualityWarehousingPage() {
 
       {/* FEATURES */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Infrastruktur</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Kualitas yang tidak kompromi.</h2>
@@ -139,7 +139,7 @@ export default function QualityWarehousingPage() {
 
       {/* NETWORK */}
       <section id="network" className="py-24">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Jaringan gudang</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">30+ warehouse di 8 regional.</h2>
@@ -158,7 +158,7 @@ export default function QualityWarehousingPage() {
 
       {/* CERTIFICATIONS */}
       <section className="py-20 bg-white border-t border-gray-100">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <p className="text-center text-sm text-gray-500 uppercase tracking-widest font-semibold mb-8">
             Sertifikasi &amp; Standar
           </p>

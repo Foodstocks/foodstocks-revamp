@@ -166,7 +166,7 @@ export function DualPath() {
 
   return (
     <section className="py-24 border-t border-gray-100">
-      <div className="max-w-[88rem] mx-auto px-6">
+      <div className="max-w-[82rem] mx-auto px-6">
         {/* Section header */}
         <div className="text-center max-w-2xl mx-auto">
           <span className="eyebrow">Satu platform, dua jalan</span>

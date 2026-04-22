@@ -8,7 +8,7 @@ export function Footer() {
 
   return (
     <footer className="bg-gray-950 text-gray-400 pt-20 pb-10">
-      <div className="max-w-[88rem] mx-auto px-6">
+      <div className="max-w-[82rem] mx-auto px-6">
         <div className="grid md:grid-cols-2 lg:grid-cols-6 gap-10 pb-16 border-b border-gray-800">
           <div className="lg:col-span-2">
             <Image src="/logo.png" alt="Foodstocks" width={120} height={40} className="h-10 w-auto bg-white rounded-xl p-2" />

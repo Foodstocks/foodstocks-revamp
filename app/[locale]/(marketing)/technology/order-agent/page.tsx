@@ -41,7 +41,7 @@ export default function OrderAgentPage() {
     <>
       {/* HERO: live demo */}
       <section className="relative bg-white">
-        <div className="max-w-[88rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
+        <div className="max-w-[82rem] mx-auto px-6 pt-16 pb-20 lg:pt-20 lg:pb-24 grid lg:grid-cols-12 gap-12 items-center">
           <Reveal className="lg:col-span-6">
             <span className="eyebrow">Fitur Baru · AI-Powered</span>
             <h1 className="heading-brand mt-6 text-[clamp(2.5rem,5vw+1rem,5rem)]">
@@ -143,7 +143,7 @@ export default function OrderAgentPage() {
 
       {/* INPUT SOURCES */}
       <section className="py-24 bg-gray-50">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="eyebrow">Input sources</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">5 jenis order, 1 AI.</h2>
@@ -173,7 +173,7 @@ export default function OrderAgentPage() {
 
       {/* HOW IT WORKS */}
       <section id="demo" className="py-24">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="max-w-2xl mb-14">
             <span className="eyebrow">Cara kerja</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Dari pesan ke order dalam 3 langkah.</h2>
@@ -192,7 +192,7 @@ export default function OrderAgentPage() {
 
       {/* TIME SAVED COMPARISON */}
       <section className="py-24 bg-brand-ink text-white">
-        <div className="max-w-[88rem] mx-auto px-6">
+        <div className="max-w-[82rem] mx-auto px-6">
           <div className="text-center max-w-2xl mx-auto mb-14">
             <span className="eyebrow" style={{ background: 'rgba(227,6,19,0.15)', color: '#FCA5A5' }}>Impact</span>
             <h2 className="heading-brand mt-4 text-4xl md:text-5xl">Hemat jam kerja, kurangi typo.</h2>

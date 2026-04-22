@@ -152,7 +152,7 @@ export function PricingTabs() {
       </div>
 
       {/* Tiers */}
-      <div className="mt-14 grid lg:grid-cols-3 gap-4 w-full max-w-[88rem]">
+      <div className="mt-14 grid lg:grid-cols-3 gap-4 w-full max-w-[82rem]">
         {tiers.map((t) => (
           <article
             key={t.title}

@@ -17,7 +17,7 @@ export function TopBar() {
 
   return (
     <div className="bg-brand-ink text-white text-xs">
-      <div className="max-w-[88rem] mx-auto px-6 py-2 flex items-center justify-between">
+      <div className="max-w-[82rem] mx-auto px-6 py-2 flex items-center justify-between">
         <div className="flex items-center gap-4 text-white/80">
           <button
             onClick={toggleLocale}

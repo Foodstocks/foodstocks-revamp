@@ -14,7 +14,7 @@ export default function ShopHomePage() {
   return (
     <>
       {/* PROMO BANNER */}
-      <section className="max-w-[88rem] mx-auto px-6 pt-6">
+      <section className="max-w-[82rem] mx-auto px-6 pt-6">
         <div className="rounded-3xl bg-brand-red text-white p-8 md:p-12 flex flex-col md:flex-row items-center gap-6 md:gap-12">
           <div className="flex-1">
             <span className="inline-block text-[10px] font-bold uppercase tracking-widest bg-white/15 px-2 py-1 rounded-full">
@@ -39,7 +39,7 @@ export default function ShopHomePage() {
       </section>
 
       {/* BEST SELLERS */}
-      <section className="max-w-[88rem] mx-auto px-6 py-12">
+      <section className="max-w-[82rem] mx-auto px-6 py-12">
         <div className="flex items-end justify-between mb-6">
           <div>
             <span className="eyebrow">Best Sellers</span>
@@ -55,7 +55,7 @@ export default function ShopHomePage() {
       </section>
 
       {/* BRAND SPOTLIGHT */}
-      <section className="max-w-[88rem] mx-auto px-6 py-12">
+      <section className="max-w-[82rem] mx-auto px-6 py-12">
         <div className="flex items-end justify-between mb-6">
           <div>
             <span className="eyebrow">Brand Spotlight</span>
@@ -75,7 +75,7 @@ export default function ShopHomePage() {
       </section>
 
       {/* NEW ARRIVALS */}
-      <section className="max-w-[88rem] mx-auto px-6 py-12">
+      <section className="max-w-[82rem] mx-auto px-6 py-12">
         <div className="flex items-end justify-between mb-6">
           <div>
             <span className="eyebrow">New Arrivals</span>
