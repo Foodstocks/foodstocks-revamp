@@ -177,7 +177,7 @@ export function Header() {
         {openMenu === 'solutions' && (
           <div className="max-w-[82rem] mx-auto px-6 flex min-h-[220px]">
             {/* Left sidebar */}
-            <div className="w-56 flex-shrink-0 py-5 pr-6 border-r border-gray-100">
+            <div className="w-56 flex-shrink-0 py-5 pr-6 border-r border-gray-100 flex flex-col">
               <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-4 mb-2">Solutions</p>
               {([
                 { key: 'supplier' as const, title: 'Untuk Supplier', desc: 'Distribusi & produksi' },
@@ -196,6 +196,18 @@ export function Header() {
                   <ChevronRight />
                 </button>
               ))}
+              {/* Featured card — FS OrderAgent */}
+              <div className="mt-auto pt-3">
+                <div className="bg-gradient-to-br from-brand-ink to-slate-800 rounded-xl p-3">
+                  <p className="text-[9px] font-bold text-brand-red uppercase tracking-widest">Baru</p>
+                  <p className="text-xs font-bold text-white mt-1 leading-tight">FS OrderAgent</p>
+                  <p className="text-[10px] text-white/50 mt-1 leading-tight">AI order dari WA & email</p>
+                  <Link href="/technology/order-agent" onClick={() => setOpenMenu(null)}
+                    className="mt-2 flex items-center gap-1 text-brand-red text-[10px] font-bold hover:underline">
+                    Lihat demo →
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Right panel */}
@@ -228,7 +240,7 @@ export function Header() {
         {openMenu === 'technology' && (
           <div className="max-w-[82rem] mx-auto px-6 flex min-h-[220px]">
             {/* Left sidebar */}
-            <div className="w-56 flex-shrink-0 py-5 pr-6 border-r border-gray-100">
+            <div className="w-56 flex-shrink-0 py-5 pr-6 border-r border-gray-100 flex flex-col">
               <p className="text-[10px] font-bold uppercase tracking-widest text-gray-400 px-4 mb-2">Technology</p>
               {([
                 { key: 'retail' as const, title: 'Retail & Catalog', desc: 'AR, 3D, smart browse' },
@@ -247,6 +259,18 @@ export function Header() {
                   <ChevronRight />
                 </button>
               ))}
+              {/* Featured card — AR */}
+              <div className="mt-auto pt-3">
+                <div className="bg-gradient-to-br from-slate-900 via-purple-950 to-brand-ink rounded-xl p-3">
+                  <p className="text-[9px] font-bold text-purple-300 uppercase tracking-widest">Pertama di Indonesia</p>
+                  <p className="text-xs font-bold text-white mt-1 leading-tight">AR Product Experience</p>
+                  <p className="text-[10px] text-white/50 mt-1 leading-tight">3D, resep, info nutrisi</p>
+                  <Link href="/technology/ar" onClick={() => setOpenMenu(null)}
+                    className="mt-2 flex items-center gap-1 text-purple-300 text-[10px] font-bold hover:underline">
+                    Coba demo AR →
+                  </Link>
+                </div>
+              </div>
             </div>
 
             {/* Right panel */}
